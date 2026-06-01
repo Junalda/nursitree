@@ -1,0 +1,237 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* NursiTree Brand Colors */
+    --nt-green: 107 165 57;       /* #6BA539 */
+    --nt-green-dark: 90 144 48;   /* #5A9030 */
+    --nt-orange: 232 133 74;      /* #E8854A */
+    --nt-orange-dark: 210 115 55; /* #D27337 */
+    --nt-dark: 24 36 24;          /* #182418 */
+
+    --background: 0 0% 100%;
+    --foreground: 150 20% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 150 20% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 20% 10%;
+
+    --primary: 96 49% 44%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 90 20% 96%;
+    --secondary-foreground: 150 20% 10%;
+
+    --muted: 90 15% 96%;
+    --muted-foreground: 150 5% 45%;
+
+    --accent: 24 78% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 90 10% 90%;
+    --input: 90 10% 90%;
+    --ring: 96 49% 44%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 90 15% 96%;
+    --sidebar-foreground: 150 20% 15%;
+    --sidebar-primary: 96 49% 44%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 90 10% 92%;
+    --sidebar-accent-foreground: 150 20% 15%;
+    --sidebar-border: 90 10% 90%;
+    --sidebar-ring: 96 49% 44%;
+  }
+
+  .dark {
+    --background: 150 20% 5%;
+    --foreground: 0 0% 95%;
+
+    --card: 150 20% 7%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 150 20% 7%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 96 49% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 150 15% 12%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 150 15% 12%;
+    --muted-foreground: 150 5% 60%;
+
+    --accent: 24 78% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 150 15% 15%;
+    --input: 150 15% 15%;
+    --ring: 96 49% 50%;
+
+    --sidebar-background: 150 20% 8%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 96 49% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 150 15% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 150 15% 15%;
+    --sidebar-ring: 96 49% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  pre, code {
+    @apply font-mono;
+  }
+
+  /* Prevent horizontal overflow on all containers */
+  main, section, footer, header, nav {
+    max-width: 100vw;
+  }
+}
+
+/* ─── Mobile-specific improvements ─── */
+@media (max-width: 640px) {
+  /* Ensure images don't overflow */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Better tap targets on mobile */
+  button, a {
+    min-height: 44px;
+  }
+
+  /* Prevent text from being too small */
+  body {
+    font-size: 16px;
+  }
+}
+
+
+/* ─── Scroll-triggered animations ─── */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-on-scroll-delay-1 {
+  transition-delay: 0.1s;
+}
+.animate-on-scroll-delay-2 {
+  transition-delay: 0.2s;
+}
+.animate-on-scroll-delay-3 {
+  transition-delay: 0.3s;
+}
+.animate-on-scroll-delay-4 {
+  transition-delay: 0.4s;
+}
+
+/* ─── Subtle float animation ─── */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* ─── Pulse glow for CTA ─── */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(232, 133, 74, 0.3); }
+  50% { box-shadow: 0 0 0 12px rgba(232, 133, 74, 0); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+/* ─── Gradient text ─── */
+.text-gradient-brand {
+  background: linear-gradient(135deg, #6BA539, #E8854A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Orange accent line ─── */
+.accent-line-orange {
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, #E8854A, #6BA539);
+  border-radius: 2px;
+}
+
+/* ─── Markdown styles ─── */
+.markdown-editor {
+  @apply font-mono text-base leading-relaxed;
+}
+
+.markdown-preview {
+  @apply prose max-w-none dark:prose-invert;
+}
+
+.markdown-preview pre {
+  @apply bg-secondary p-4 rounded-md overflow-x-auto;
+}
+
+.markdown-preview code {
+  @apply text-sm font-mono text-primary;
+}
+
+.markdown-preview h1,
+.markdown-preview h2,
+.markdown-preview h3,
+.markdown-preview h4,
+.markdown-preview h5,
+.markdown-preview h6 {
+  @apply font-sans font-semibold text-foreground;
+}
+
+.markdown-preview ul,
+.markdown-preview ol {
+  @apply my-4 ml-6;
+}
