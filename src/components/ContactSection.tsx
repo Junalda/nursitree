@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { CheckCircle2, Send, Loader2, AlertCircle } from 'lucide-react';
-import { supabase } from '@/lib/supabase';
+import { getSupabase } from '@/lib/supabase';
 
 /**
  * ContactSection
@@ -38,6 +38,12 @@ const ContactSection: React.FC = () => {
     }
     setFormErrors({});
     setFormStatus('loading');
+    const supabase = getSupabase();
+    if (!supabase) {
+      setSubmitError('Er is iets misgegaan bij het versturen van jouw bericht. Probeer het later opnieuw.');
+      setFormStatus('error');
+      return;
+    }
     try {
       // Persist to Supabase (best-effort, non-blocking for email)
       try {
