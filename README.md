@@ -19,6 +19,8 @@ This is a faithful 1:1 rebuild of the original Famous.ai export in a clean, main
 
 ```
 .
+├── api/                    # Vercel serverless functions
+│   └── contact.js          # POST /api/contact — sends the form email via Resend
 ├── public/                 # Static files served as-is (favicon, robots.txt, sitemap, manifest)
 ├── src/
 │   ├── assets/             # Local assets (images are CDN-hosted, see "Assets" below)
@@ -80,8 +82,8 @@ npm install
 
 ### Environment variables
 
-The contact form talks to Supabase. Credentials are read from environment
-variables (they are **not** hardcoded in source). Create a local `.env`:
+Credentials are read from environment variables (they are **not** hardcoded in
+source). Create a local `.env`:
 
 ```bash
 cp .env.example .env
@@ -90,18 +92,49 @@ cp .env.example .env
 Then fill in:
 
 ```
+# Optional: only used to also persist submissions to a Supabase "contacts" table
 VITE_SUPABASE_URL=https://your-project.supabase.co
 VITE_SUPABASE_ANON_KEY=your-anon-key
+
+# Required for the contact form to send email (server-side only — no VITE_ prefix)
+RESEND_API_KEY=your-resend-api-key
 ```
 
+> **`RESEND_API_KEY` is a server-side secret.** It deliberately has **no**
+> `VITE_` prefix, so Vite never bundles it into the browser. It is read only by
+> the serverless function `api/contact.js`. The sending domain (`nursitree.com`)
+> must be **verified in Resend** so that `noreply@nursitree.com` is allowed as
+> the `From` address.
+>
 > The Supabase **anon** key is a public, browser-safe key protected by Row
-> Level Security and is meant to be shipped to the client. It is kept in env
-> vars only so it is not committed to the repo. **Never** put a Supabase
-> *service role* key or any true secret in a `VITE_` variable — those are
-> bundled into the frontend and would be publicly exposed.
+> Level Security and is meant to be shipped to the client. It is optional here
+> (used only to also store submissions in a `contacts` table). **Never** put a
+> Supabase *service role* key or any true secret in a `VITE_` variable — those
+> are bundled into the frontend and would be publicly exposed.
 
-The rest of the site renders fully without these variables; only the contact
-form submission needs them.
+The whole site renders fully without any of these variables; only the contact
+form's email send requires `RESEND_API_KEY`.
+
+### Contact form / email (Resend)
+
+The contact form (`src/components/ContactSection.tsx`) POSTs the submission as
+JSON to `POST /api/contact`. The serverless function `api/contact.js`:
+
+- validates the required fields (`name`, `email`, `company`, `message`),
+- sends the email via **Resend** to `info@nursitree.com`,
+  from `NursiTree <noreply@nursitree.com>`, with `Reply-To` set to the
+  submitter's email and subject `Nieuw contactformulier bericht`,
+- includes all submitted values (Naam, E-mail, Bedrijf, Telefoon, Type project,
+  Bericht, Timestamp),
+- returns `{ "success": true }` on success or `{ "error": "…" }` on failure.
+
+The success UI only appears after Resend confirms the send. Technical errors are
+logged server-side only; the browser always shows a friendly Dutch message.
+
+During `npm run dev`, a small dev-only Vite middleware (in `vite.config.ts`)
+mounts the same handler at `/api/contact` so the form can be tested locally. In
+production Vercel serves `api/contact.js` natively and that middleware is not
+involved.
 
 ### Develop
 
@@ -133,7 +166,8 @@ npm run lint
 
 ## Deployment (Vercel)
 
-This is a static SPA. To deploy on Vercel:
+This is a Vite SPA plus one serverless function (`api/contact.js`). To deploy
+on Vercel:
 
 1. Import the repository into Vercel.
 2. Vercel auto-detects Vite. Confirm:
@@ -142,13 +176,14 @@ This is a static SPA. To deploy on Vercel:
    - **Output Directory:** `dist`
    - **Install Command:** `npm install`
 3. Add the environment variables under **Settings → Environment Variables**:
-   - `VITE_SUPABASE_URL`
-   - `VITE_SUPABASE_ANON_KEY`
-4. Deploy.
+   - `RESEND_API_KEY` *(required for the contact form email)*
+   - `VITE_SUPABASE_URL` *(optional)*
+   - `VITE_SUPABASE_ANON_KEY` *(optional)*
+4. In **Resend**, verify the `nursitree.com` domain so `noreply@nursitree.com`
+   can be used as the sender.
+5. Deploy.
 
-`vercel.json` rewrites all paths to `index.html` so client-side routes
-(`/platform`, `/diensten`, …) resolve correctly on direct navigation and
-page refresh.
-
-The same setup works on Netlify or any static host — just serve `dist/` and
-add a SPA fallback to `index.html`.
+Vercel automatically builds `api/contact.js` as a serverless function at
+`/api/contact` — no extra configuration needed. `vercel.json` only rewrites
+non-API paths to `index.html` so client-side routes (`/platform`, `/diensten`,
+…) resolve on direct navigation and refresh; `/api/*` is left untouched.

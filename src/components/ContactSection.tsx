@@ -38,32 +38,31 @@ const ContactSection: React.FC = () => {
     }
     setFormErrors({});
     setFormStatus('loading');
-    const supabase = getSupabase();
-    if (!supabase) {
-      setSubmitError('Er is iets misgegaan bij het versturen van jouw bericht. Probeer het later opnieuw.');
-      setFormStatus('error');
-      return;
-    }
     try {
-      // Persist to Supabase (best-effort, non-blocking for email)
-      try {
-        await supabase.from('contacts').insert({
-          name: formData.name.trim(),
-          email: formData.email.trim().toLowerCase(),
-          company: formData.company.trim(),
-          phone: formData.phone.trim() || null,
-          project_type: formData.projectType || null,
-          message: formData.message.trim(),
-          read: false
-        });
-      } catch (dbErr) {
-        // Don't block the user on DB errors; we still want the email to go through
-        console.error('Supabase insert failed (non-blocking):', dbErr);
+      // Persist to Supabase (best-effort, non-blocking) only when configured.
+      const supabase = getSupabase();
+      if (supabase) {
+        try {
+          await supabase.from('contacts').insert({
+            name: formData.name.trim(),
+            email: formData.email.trim().toLowerCase(),
+            company: formData.company.trim(),
+            phone: formData.phone.trim() || null,
+            project_type: formData.projectType || null,
+            message: formData.message.trim(),
+            read: false
+          });
+        } catch (dbErr) {
+          // Don't block the user on DB errors; we still want the email to go through
+          console.error('Supabase insert failed (non-blocking):', dbErr);
+        }
       }
 
-      // Send email via Resend through secure edge function
-      const { data, error } = await supabase.functions.invoke('send-contact-email', {
-        body: {
+      // Send email via Resend through the serverless API route (/api/contact).
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
           name: formData.name.trim(),
           email: formData.email.trim().toLowerCase(),
           company: formData.company.trim(),
@@ -71,12 +70,19 @@ const ContactSection: React.FC = () => {
           projectType: formData.projectType,
           message: formData.message.trim(),
           timestamp: new Date().toISOString()
-        }
+        })
       });
 
-      if (error || (data && (data as { error?: string }).error)) {
-        const serverMsg = (data as { error?: string } | null)?.error;
-        console.error('send-contact-email error:', error, serverMsg);
+      let data: { success?: boolean; error?: string } | null = null;
+      try {
+        data = await response.json();
+      } catch {
+        data = null;
+      }
+
+      if (!response.ok || !data?.success) {
+        const serverMsg = data?.error;
+        console.error('Contact API error:', response.status, serverMsg);
         setSubmitError(serverMsg || 'Er is iets misgegaan bij het versturen van jouw bericht. Probeer het later opnieuw.');
         setFormStatus('error');
         return;
