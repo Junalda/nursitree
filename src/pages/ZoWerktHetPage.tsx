@@ -8,7 +8,8 @@ import ZwhProduct from '@/components/zowerkthet/ZwhProduct';
 import ZwhHowItWorks from '@/components/zowerkthet/ZwhHowItWorks';
 import ZwhDiagram from '@/components/zowerkthet/ZwhDiagram';
 import ZwhBenefits from '@/components/zowerkthet/ZwhBenefits';
-import ZwhFaq, { faqs } from '@/components/zowerkthet/ZwhFaq';
+import ZwhFaq from '@/components/zowerkthet/ZwhFaq';
+import { faqs } from '@/components/zowerkthet/faqData';
 import ZwhFinalCta from '@/components/zowerkthet/ZwhFinalCta';
 import ZwhGreenCta from '@/components/zowerkthet/ZwhGreenCta';
 
