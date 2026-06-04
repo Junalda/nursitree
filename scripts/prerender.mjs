@@ -14,7 +14,8 @@ import http from 'node:http';
 import { createReadStream, existsSync, statSync, readFileSync, mkdirSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import puppeteer from 'puppeteer';
+import puppeteer from 'puppeteer-core';
+import chromium from '@sparticuz/chromium';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DIST = path.resolve(__dirname, '..', 'dist');
@@ -78,13 +79,25 @@ function startServer() {
 
 async function prerender() {
   const server = await startServer();
-  const browser = await puppeteer.launch({
-    headless: true,
-    // On Vercel puppeteer uses its bundled Chromium; locally set
-    // PUPPETEER_EXECUTABLE_PATH to an existing browser.
-    executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || undefined,
-    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage', '--disable-gpu'],
-  });
+
+  // Browser launch strategy:
+  // - Locally: set PUPPETEER_EXECUTABLE_PATH to an installed Chrome/Chromium.
+  // - On Vercel/CI: use @sparticuz/chromium, a Chromium build that runs in
+  //   minimal environments WITHOUT the system shared libraries (libnspr4.so,
+  //   libnss3, …) that the default puppeteer download requires.
+  const localExecutable = process.env.PUPPETEER_EXECUTABLE_PATH;
+  const launchOptions = localExecutable
+    ? {
+        headless: true,
+        executablePath: localExecutable,
+        args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage', '--disable-gpu'],
+      }
+    : {
+        headless: true,
+        executablePath: await chromium.executablePath(),
+        args: chromium.args,
+      };
+  const browser = await puppeteer.launch(launchOptions);
 
   let failed = 0;
   for (const route of ROUTES) {
