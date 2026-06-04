@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Puppeteer's downloaded Chromium (build-time prerender)
+.cache
+
 # Environment variables (keep secrets/keys out of the repo)
 .env
 .env.*
