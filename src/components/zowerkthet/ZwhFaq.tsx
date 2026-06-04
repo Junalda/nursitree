@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
-interface FaqItem {
+export interface FaqItem {
   question: string;
   answer: string;
 }
-const faqs: FaqItem[] = [{
+export const faqs: FaqItem[] = [{
   question: 'Wat zijn de afdekmogelijkheden?',
   answer: 'De bovenzijde van BRENT kan volledig worden afgedekt met diverse materialen: bestrating, tegels, half-verharding of groen. Dit maakt volledige integratie in het bestaande maaiveld mogelijk, ongeacht het straatprofiel. Meerdere combinaties zijn mogelijk, waardoor het systeem flexibel inzetbaar is in elk stedelijk ontwerp.'
 }, {

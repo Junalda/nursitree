@@ -8,7 +8,7 @@ import ZwhProduct from '@/components/zowerkthet/ZwhProduct';
 import ZwhHowItWorks from '@/components/zowerkthet/ZwhHowItWorks';
 import ZwhDiagram from '@/components/zowerkthet/ZwhDiagram';
 import ZwhBenefits from '@/components/zowerkthet/ZwhBenefits';
-import ZwhFaq from '@/components/zowerkthet/ZwhFaq';
+import ZwhFaq, { faqs } from '@/components/zowerkthet/ZwhFaq';
 import ZwhFinalCta from '@/components/zowerkthet/ZwhFinalCta';
 import ZwhGreenCta from '@/components/zowerkthet/ZwhGreenCta';
 
@@ -23,16 +23,28 @@ const ZoWerktHetPage: React.FC = () => {
           { name: 'Home', url: 'https://www.nursitree.com/' },
           { name: 'Zo werkt het', url: 'https://www.nursitree.com/zo-werkt-het' },
         ]}
-        jsonLd={{
-          '@context': 'https://schema.org',
-          '@type': 'TechArticle',
-          headline: 'Zo werkt de Urban Tree Pit BRENT',
-          about: 'De gepatenteerde, modulaire boomgroeiplaats BRENT van NursiTree, met geïntegreerd watermanagement, wortelbescherming en mogelijkheid tot herplaatsing.',
-          author: { '@type': 'Organization', name: 'NursiTree B.V.' },
-          publisher: { '@type': 'Organization', name: 'NursiTree B.V.', url: 'https://www.nursitree.com/' },
-          inLanguage: 'nl-NL',
-          url: 'https://www.nursitree.com/zo-werkt-het'
-        }}
+        jsonLd={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'TechArticle',
+            headline: 'Zo werkt de Urban Tree Pit BRENT',
+            about: 'De gepatenteerde, modulaire boomgroeiplaats BRENT van NursiTree, met geïntegreerd watermanagement, wortelbescherming en mogelijkheid tot herplaatsing.',
+            author: { '@type': 'Organization', name: 'NursiTree B.V.' },
+            publisher: { '@type': 'Organization', name: 'NursiTree B.V.', url: 'https://www.nursitree.com/' },
+            inLanguage: 'nl-NL',
+            url: 'https://www.nursitree.com/zo-werkt-het'
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            // Built from the same FAQ data shown on the page (src/components/zowerkthet/ZwhFaq.tsx) — no new content.
+            mainEntity: faqs.map((f) => ({
+              '@type': 'Question',
+              name: f.question,
+              acceptedAnswer: { '@type': 'Answer', text: f.answer }
+            }))
+          }
+        ]}
       />
 
 

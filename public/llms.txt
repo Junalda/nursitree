@@ -1,0 +1,29 @@
+# NursiTree
+
+> NursiTree levert gestandaardiseerde, gepatenteerde groeiplaatsen (Urban Tree Pit) voor gezonde bomen in de stad — voor klimaatadaptatie, biodiversiteit en slimme openbare ruimte.
+
+NursiTree B.V. ontwikkelt de Urban Tree Pit "BRENT": een modulaire, herplaatsbare boomgroeiplaats met geïntegreerd watermanagement en wortelbescherming, plus een digitaal platform (boompaspoort en monitoring) voor gemeenten, aannemers en beheerders.
+
+## Pagina's
+
+- [Home](https://www.nursitree.com/): Slimme groeiplaatsen en de Urban Tree Pit voor stedelijke vergroening.
+- [Zo werkt het](https://www.nursitree.com/zo-werkt-het): Hoe de gepatenteerde Urban Tree Pit BRENT werkt — van waterhuishouding en wortelbescherming tot verplaatsbaarheid.
+- [Producten](https://www.nursitree.com/producten): BRENT, de Levelingunit en add-ons — modulaire boomgroeiplaatsen voor stedelijke vergroening.
+- [Diensten](https://www.nursitree.com/diensten): Engineering, installatie, aanplant, monitoring en boomverplanting.
+- [Platform](https://www.nursitree.com/platform): Digitaal boompaspoort, monitoring en marktplaats voor herplaatsbare stadsbomen.
+- [Projecten](https://www.nursitree.com/projecten): Case studies en realisaties van de Urban Tree Pit in de praktijk in Nederland.
+- [Over ons](https://www.nursitree.com/over-ons): NursiTree en oprichters Tony Hoekstra en Gerbrand van de Weerd.
+- [Onze visie](https://www.nursitree.com/onze-visie): Van de stad een boomkwekerij maken voor klimaatadaptatie, biodiversiteit en een leefbare openbare ruimte.
+
+## Contact
+
+- Bedrijf: NursiTree B.V., Noordzijdsedreef 10, 3257 LL Ooltgensplaat, Nederland
+- E-mail: info@nursitree.com
+- Website: https://www.nursitree.com
+
+## Optional
+
+- [Sitemap](https://www.nursitree.com/sitemap.xml)
+- [Privacyverklaring](https://www.nursitree.com/privacyverklaring)
+- [Algemene voorwaarden](https://www.nursitree.com/algemene-voorwaarden)
+- [Cookiebeleid](https://www.nursitree.com/cookiebeleid)
