@@ -10,10 +10,10 @@ const Footer: React.FC = () => {
   return <footer className="bg-[#182418] text-white -mt-px border-t-0">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 sm:gap-12 lg:gap-x-8 lg:gap-y-12 items-start">
+        <div className="grid grid-cols-2 lg:grid-cols-12 gap-x-6 gap-y-10 sm:gap-12 lg:gap-x-8 lg:gap-y-12 items-start">
 
           {/* Brand + Profiles — spans 4/12 on desktop, leaving 8/12 evenly split across the four link columns (each col-span-2) */}
-          <div className="min-w-0 sm:col-span-2 lg:col-span-4 max-md:landscape:flex max-md:landscape:flex-row max-md:landscape:items-start max-md:landscape:justify-between max-md:landscape:gap-4">
+          <div className="min-w-0 col-span-2 lg:col-span-4 max-md:landscape:flex max-md:landscape:flex-row max-md:landscape:items-start max-md:landscape:justify-between max-md:landscape:gap-4">
 
             {/* Left sub-block: logo + description */}
             <div className="max-md:landscape:flex-1 max-md:landscape:min-w-0">
