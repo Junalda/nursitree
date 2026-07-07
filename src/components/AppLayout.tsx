@@ -78,13 +78,13 @@ const reviews = [{
   initials: 'AB',
   logo: LOGO_SPORTBEDRIJF_ROTTERDAM_URL,
   logoAlt: 'Logo Sportbedrijf Rotterdam',
-  bgColor: '#f5f5f0',
-  textColor: 'text-gray-900',
-  subtextColor: 'text-gray-500',
-  quoteIconBg: 'bg-[#4E8A25]/10',
-  quoteIconColor: 'text-[#4E8A25]',
-  borderColor: 'border-gray-200',
-  avatarBg: 'bg-[#4E8A25]',
+  bgColor: '#2A2A2A',
+  textColor: 'text-white',
+  subtextColor: 'text-white/70',
+  quoteIconBg: 'bg-white/15',
+  quoteIconColor: 'text-white',
+  borderColor: 'border-white/10',
+  avatarBg: 'bg-white/20',
   avatarText: 'text-white'
 }];
 
