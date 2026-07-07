@@ -12,8 +12,11 @@ approval from the repository owner.
 3. **Deploy to a Vercel Preview first.** Pushing `staging` (or opening a PR)
    triggers an automatic Vercel **Preview** deployment. Share the preview URL
    for review.
-4. **Merge into `main` only after the owner approves the preview.** Do not
-   open, merge, or fast-forward into `main` on your own initiative.
+4. **Merge into `main` only when the owner explicitly says "merge".** Never
+   push, merge, or fast-forward into `main` on your own initiative — not even
+   after a green preview. Default action for any change is: commit to `staging`
+   and push for a preview, then stop and wait. Only the owner's explicit "merge"
+   instruction moves it to `main` (production).
 
 ### Practical steps for a change
 
