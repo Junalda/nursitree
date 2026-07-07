@@ -388,7 +388,7 @@ In onze Urban Tree Pits groeien bomen circa 20 jaar, waarna de bomen eenvoudig t
                     Wij maken slim gebruik van de beperkte ruimte
                   </h2>
                   <p className="text-base sm:text-lg text-gray-500 leading-relaxed mb-4 sm:mb-6 text-left">
-                    Iedereen wil wel meer bomen in de stad, maar in de praktijk lijkt daar vaak geen ruimte voor. Je moet rekening houden met:
+                    Iedereen wil wel meer bomen in de stad, maar dat is makkelijker gezegd dan gedaan. Je moet rekening houden met:
                   </p>
 
                   <ul className="flex flex-col gap-3 sm:gap-4 mt-6 sm:mt-8 list-none">
@@ -429,7 +429,7 @@ In onze Urban Tree Pits groeien bomen circa 20 jaar, waarna de bomen eenvoudig t
                     Wij maken slim gebruik van de beperkte ruimte
                   </h2>
                   <p className="text-base sm:text-lg text-gray-500 leading-relaxed mb-4 sm:mb-6 text-left">
-                    Iedereen wil wel meer bomen in de stad, maar in de praktijk lijkt daar vaak geen ruimte voor. Je moet rekening houden met:
+                    Iedereen wil wel meer bomen in de stad, maar dat is makkelijker gezegd dan gedaan. Je moet rekening houden met:
                   </p>
 
                   <ul className="flex flex-col gap-3 xl:gap-4 mt-6 xl:mt-8 list-none">
@@ -460,7 +460,7 @@ In onze Urban Tree Pits groeien bomen circa 20 jaar, waarna de bomen eenvoudig t
                       </span>
                       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mt-3 sm:mt-5 mb-5 sm:mb-8 leading-tight tracking-tight text-left">Met onze slimme groeiplaats wel</h2>
                       <p className="text-base sm:text-lg text-gray-500 leading-relaxed text-left">
-                        Deze is zo ingericht dat we elke boom op het juiste moment kunnen verplaatsen naar een vaste plek. Zonder schade aan de wortelstructuur of kluit, maar mét een mooie toekomst voor zich.
+                        Onze Urban Tree Pits zijn zo ingericht dat we elke boom op het juiste moment kunnen verplaatsen naar een vaste plek. Zonder schade aan de wortelstructuur of kluit, maar mét een mooie toekomst voor zich.
                       </p>
                     </div>
 
@@ -480,10 +480,10 @@ In onze Urban Tree Pits groeien bomen circa 20 jaar, waarna de bomen eenvoudig t
                     desc: 'Elke boom kan op het juiste moment worden verplaatst naar een vaste plek, zonder stress voor de boom.'
                   }, {
                     title: 'Wortelbescherming',
-                    desc: 'Zonder schade aan de wortelstructuur of kluit. Het systeem beschermt wat onder de grond groeit.'
+                    desc: 'Het systeem beschermt wat onder de grond groeit en voorkomt schade aan de wortelstructuur of kluit.'
                   }, {
                     title: 'Toekomstbestendig',
-                    desc: 'Speel in op veranderingen met flexibele bomen en richt de buitenruimte zo groen en efficiënt mogelijk in.'
+                    desc: 'Veranderingen van ruimte zijn mogelijk met behoud van boomkroonvolume en ecosysteemdiensten.'
                   }].map((item, i) => <div key={item.title} className={`animate-on-scroll animate-on-scroll-delay-${i + 1} group flex flex-col h-full text-left p-6 sm:p-6 md:p-8 lg:p-10 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md hover:border-gray-200 transition-all duration-300`}>
                         <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">{item.title}</h3>
                         <p className="text-sm sm:text-base text-gray-500 leading-relaxed">{item.desc}</p>
