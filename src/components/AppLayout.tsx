@@ -616,12 +616,12 @@ In onze Urban Tree Pits groeien bomen circa 20 jaar, waarna de bomen eenvoudig t
                     </h2>
                     <p className="text-base sm:text-lg text-white/80 leading-relaxed mb-4 sm:mb-6 text-left">Van showmodellen tot stedelijke vergroening, bekijk hoe we de Urban Tree Pit in verschillende omgevingen inzetten.</p>
                     <p className="text-base sm:text-lg text-white/80 leading-relaxed mb-6 sm:mb-10 text-left">
-                      Met meer dan 25 jaar expertise in stedelijk groen, infrastructuur en boomtechnologie ontwikkelen wij slimme, geïntegreerde oplossingen.
+                      Met meer dan 25 jaar expertise in stedelijk groen, infrastructuur en boomtechnologie ontwikkelen wij slimme, geïntegreerde oplossingen. Waar anderen obstakels zien, zien wij kansen.
                     </p>
 
                     {/* Key expertise points */}
                     <div className="space-y-3 sm:space-y-4 mb-8 sm:mb-12">
-                      {['Stedelijk groen & boomtechnologie', 'Infrastructuur & gebiedsontwikkeling', 'Waar anderen obstakels zien, zien wij kansen'].map(text => <div key={text} className="flex items-center gap-3 sm:gap-4">
+                      {['Stedelijk groen & boomtechnologie', 'Infrastructuur & gebiedsontwikkeling', 'Flexibel & innovatief'].map(text => <div key={text} className="flex items-center gap-3 sm:gap-4">
                           <div className="w-1.5 h-1.5 rounded-full bg-white flex-shrink-0" />
                           <span className="text-sm sm:text-base text-white/90 font-medium text-left">{text}</span>
                         </div>)}
