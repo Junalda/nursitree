@@ -152,7 +152,7 @@ const ContactSection: React.FC = () => {
               desc: 'Ontvang onze volledige technische specificaties.'
             }, {
               title: 'Bezoek demolocatie:',
-              desc: 'Laat je onder het genot van een Flakkeese bolus inspireren en ervaar het in de praktijk.'
+              desc: 'Laat je onder het genot van een Flakkeese bolus inspireren en ervaar het in de praktijk.'
             }, {
               title: 'Bakfietstocht:',
               desc: 'Ga in sportieve modus met ons mee en bezoek verschillende projectlocaties.'
