@@ -526,15 +526,15 @@ In onze Urban Tree Pits groeien bomen circa 20 jaar, waarna de bomen eenvoudig t
                 <div className="animate-on-scroll">
                   <div className="max-w-4xl mx-auto bg-white rounded-2xl p-8 sm:p-12 lg:p-16 border border-gray-100 shadow-lg">
                     <blockquote className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-snug tracking-tight mb-6 sm:mb-10 text-left">
-                      Het is een misverstand dat bomen altijd moeten worden aangeplant voor een looptijd van tachtig jaar.
+                      Dat bomen altijd moeten worden aangeplant voor een looptijd van tachtig jaar is een misverstand!
                     </blockquote>
 
                     <p className="text-base sm:text-lg text-gray-500 leading-relaxed max-w-2xl mb-4 sm:mb-6 text-left">
-                      Helemaal niet slim zelfs, omdat gebiedsontwikkelingen, rioolvervangingen en andere factoren ervoor zorgen dat je nooit zeker weet hoe een gebied er over een aantal jaar uitziet.
+                      Het is eigenlijk ook helemaal niet slim, omdat gebiedsontwikkelingen, rioolvervangingen en andere factoren ervoor zorgen dat je nooit zeker weet hoe een gebied er over een aantal jaar uitziet.
                     </p>
 
                     <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-2xl font-medium text-left">
-                      Speel hier dus op in met flexibele bomen en richt de buitenruimte zo groen en efficiënt mogelijk in.
+                      Speel hier dus op in met toekomstbestendige bomen en richt de buitenruimte zo groen en efficiënt mogelijk in.
                     </p>
 
                     {/* "Nieuw perspectief" — with # symbol */}
