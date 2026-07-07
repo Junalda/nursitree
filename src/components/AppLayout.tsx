@@ -687,7 +687,6 @@ In onze Urban Tree Pits groeien bomen circa 20 jaar, waarna de bomen eenvoudig t
                       <Calendar className="w-3.5 h-3.5 max-md:landscape:w-3 max-md:landscape:h-3" />
                       Maart 2026
                     </span>
-                    <span className="ml-auto">4 min</span>
                   </div>
                   <h3 className="text-lg sm:text-xl max-md:landscape:text-sm font-bold text-gray-900 leading-snug mb-3 max-md:landscape:mb-2 group-hover:text-[#6BA539] transition-colors">
                     Urban Tree Pits Edisonlaan Apeldoorn
@@ -722,9 +721,8 @@ In onze Urban Tree Pits groeien bomen circa 20 jaar, waarna de bomen eenvoudig t
                     </span>
                     <span className="inline-flex items-center gap-1">
                       <Calendar className="w-3.5 h-3.5 max-md:landscape:w-3 max-md:landscape:h-3" />
-                      november 2025
+                      November 2025
                     </span>
-                    <span className="ml-auto">5 min</span>
                   </div>
                   <h3 className="text-lg sm:text-xl max-md:landscape:text-sm font-bold text-gray-900 leading-snug mb-3 max-md:landscape:mb-2 group-hover:text-[#6BA539] transition-colors">
                     Urban Tree Pits Sportpark DRL Rotterdam
@@ -759,9 +757,8 @@ In onze Urban Tree Pits groeien bomen circa 20 jaar, waarna de bomen eenvoudig t
                     </span>
                     <span className="inline-flex items-center gap-1">
                       <Calendar className="w-3.5 h-3.5 max-md:landscape:w-3 max-md:landscape:h-3" />
-                      november 2025
+                      November 2025
                     </span>
-                    <span className="ml-auto">4 min</span>
                   </div>
                   <h3 className="text-lg sm:text-xl max-md:landscape:text-sm font-bold text-gray-900 leading-snug mb-3 max-md:landscape:mb-2 group-hover:text-[#6BA539] transition-colors">
                     Urban Tree Pit Rotterdam LMO
