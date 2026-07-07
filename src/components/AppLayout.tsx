@@ -228,7 +228,7 @@ const AppLayout: React.FC = () => {
 
               <p className="text-base sm:text-lg md:text-xl text-white/75 leading-relaxed mt-8 sm:mt-10 mb-10 sm:mb-14 max-w-2xl text-left">Wij leveren gestandaardiseerde groeiplaatsen in de stad zodat bomen overal gezond kunnen groeien.
 
-Plekken voor circa 20 jaar, waarna de bomen eenvoudig te verplaatsen zijn naar een ruime plek. Op deze manier verandert de stad in de kwekerij voor de stad.</p>
+In onze Urban Tree Pits groeien bomen circa 20 jaar, waarna de bomen eenvoudig te verplaatsen zijn naar een ruime plek om daar het potentieel aan ecosysteemdiensten te bereiken. Op deze manier verandert de stad in de kwekerij voor de stad.</p>
 
               <div className="flex flex-col sm:flex-row items-start gap-4">
                 <Link to="/zo-werkt-het" className="px-8 py-4 bg-[#E8854A] text-white text-base font-semibold rounded-xl hover:bg-[#D27337] transition-all duration-200 shadow-lg hover:shadow-xl flex items-center gap-2 animate-pulse-glow">
