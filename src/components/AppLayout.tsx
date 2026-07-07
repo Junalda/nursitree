@@ -861,7 +861,7 @@ In onze Urban Tree Pits groeien bomen circa 20 jaar, waarna de bomen eenvoudig t
                             PNG has built-in whitespace, so at max-w-full / max-h-full
                             it visually renders at ~72% of the tile. The Sportbedrijf
                             Rotterdam and Gemeente Rotterdam logos are tightly cropped
-                            (no built-in whitespace), so we render those at 72% width/
+                            (no built-in whitespace), so we render those at 90% width/
                             height — matching the Apeldoorn optical size. Proportions
                             are preserved (object-contain), centered both axes, never
                             cropped or stretched, and the same rule applies across
@@ -871,7 +871,7 @@ In onze Urban Tree Pits groeien bomen circa 20 jaar, waarna de bomen eenvoudig t
                           <img
                             src={review.logo}
                             alt={review.logoAlt}
-                            className={TIGHT_CROPPED_LOGOS.has(review.logo) ? 'w-[72%] h-[72%] object-contain' : 'max-w-full max-h-full w-auto h-auto object-contain'}
+                            className={TIGHT_CROPPED_LOGOS.has(review.logo) ? 'w-[90%] h-[90%] object-contain' : 'max-w-full max-h-full w-auto h-auto object-contain'}
                             loading="lazy"
                             decoding="async"
                           />
