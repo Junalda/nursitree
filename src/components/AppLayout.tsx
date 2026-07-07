@@ -288,7 +288,7 @@ In onze Urban Tree Pits groeien bomen circa 20 jaar, waarna de bomen eenvoudig t
             <div className="relative z-10 py-32 sm:py-40 lg:py-44">
               <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className={`max-w-3xl transition-all duration-700 ${section2Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                  <p className="text-base sm:text-lg md:text-xl text-white/85 leading-relaxed text-left">Met onze slimme groeiplaats voor nu én een plan voor later geven we bomen de kans om te groeien waar het eigenlijk te krap is. En verplaatsen we ze op het juiste moment naar een blijvende plek. Zonder schade. Mét toekomst. Bekijk onze animatie hoe we dit doen.</p>
+                  <p className="text-base sm:text-lg md:text-xl text-white/85 leading-relaxed text-left">Met onze slimme groeiplaatsen geven we bomen nú de kans om te groeien in krappe plaatsen om ze later te verplaatsen naar een plek met voldoende ruimte om écht groot te worden. Zonder Schade. Mét toekomst. Bekijk onze animatie en zie hoe we dit doen.</p>
                   <p className="text-base sm:text-lg md:text-xl text-white/85 leading-relaxed mt-4 sm:mt-6 text-left"></p>
                 </div>
 
