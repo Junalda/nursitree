@@ -591,7 +591,7 @@ const OverOnsPage: React.FC = () => {
                       <img
                         src={t.logo}
                         alt={t.logoAlt}
-                        className={TIGHT_CROPPED_LOGOS.has(t.logo) ? 'w-[72%] h-[72%] object-contain' : 'max-w-full max-h-full w-auto h-auto object-contain'}
+                        className={t.logo === LOGO_GEMEENTE_ROTTERDAM ? 'w-full h-full object-contain scale-[1.5]' : TIGHT_CROPPED_LOGOS.has(t.logo) ? 'w-[90%] h-[90%] object-contain' : 'max-w-full max-h-full w-auto h-auto object-contain'}
                         loading="lazy"
                         decoding="async"
                       />

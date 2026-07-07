@@ -871,7 +871,7 @@ In onze Urban Tree Pits groeien bomen circa 20 jaar, waarna de bomen eenvoudig t
                           <img
                             src={review.logo}
                             alt={review.logoAlt}
-                            className={TIGHT_CROPPED_LOGOS.has(review.logo) ? 'w-[90%] h-[90%] object-contain' : 'max-w-full max-h-full w-auto h-auto object-contain'}
+                            className={review.logo === LOGO_GEMEENTE_ROTTERDAM_URL ? 'w-full h-full object-contain scale-[1.5]' : TIGHT_CROPPED_LOGOS.has(review.logo) ? 'w-[90%] h-[90%] object-contain' : 'max-w-full max-h-full w-auto h-auto object-contain'}
                             loading="lazy"
                             decoding="async"
                           />
