@@ -953,6 +953,24 @@ const SportparkDRLStory: React.FC = () => <>
         <span className="font-semibold">Aantal : 8 BRENT Urban Tree Pit</span>
       </p>
     </div>
+
+    {/* Testimonial */}
+    <figure className="mt-10 relative rounded-2xl bg-gray-50 border border-gray-100 border-l-4 border-l-[#6BA539] p-6 sm:p-8 lg:p-10">
+      <Quote className="absolute top-5 right-5 sm:top-6 sm:right-6 w-10 h-10 sm:w-12 sm:h-12 text-[#6BA539]/15" aria-hidden="true" />
+      <blockquote className="relative">
+        <p className="text-base sm:text-lg italic text-gray-700 leading-relaxed">
+          “NursiTree is voor ons een betrokken en deskundige partner gebleken.
+          Vooral de open samenwerking en het serieus meenemen van onze input
+          maakten dit traject erg waardevol.”
+        </p>
+      </blockquote>
+      <figcaption className="mt-6 pt-5 border-t border-gray-200 text-sm text-gray-500 leading-relaxed not-italic">
+        <div>
+          <span className="font-semibold text-gray-700">Arjan van Bodegom</span>
+          {' – Locatiemanager Sportbedrijf Rotterdam'}
+        </div>
+      </figcaption>
+    </figure>
   </>;
 
 /* ─── Expandable story for the Rotterdam LMO project ─── */
