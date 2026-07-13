@@ -1102,7 +1102,6 @@ const ProjectenPage: React.FC = () => {
                 <div className="flex items-center flex-wrap gap-x-3 gap-y-1 text-xs text-gray-500 mb-2">
                   <span className="inline-flex items-center gap-1"><MapPin className="w-3.5 h-3.5" />Apeldoorn</span>
                   <span className="inline-flex items-center gap-1"><Calendar className="w-3.5 h-3.5" />Maart 2026</span>
-                  <span className="hidden sm:inline">4 min</span>
                 </div>
                 <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 leading-snug mb-3">
                   Urban Tree Pits Edisonlaan Apeldoorn
@@ -1254,7 +1253,6 @@ const ProjectenPage: React.FC = () => {
                   <div className="flex items-center gap-3 text-xs text-gray-500 mb-3">
                     <span className="inline-flex items-center gap-1"><MapPin className="w-3.5 h-3.5" />Ooltgensplaat</span>
                     <span className="inline-flex items-center gap-1"><Calendar className="w-3.5 h-3.5" />Augustus 2025</span>
-                    <span className="ml-auto">6 min</span>
                   </div>
                   <h3 className="text-lg sm:text-xl font-bold text-gray-900 leading-snug mb-3 group-hover:text-[#6BA539] transition-colors">
                     Urban Tree Pits Ooltgensplaat
@@ -1295,7 +1293,6 @@ const ProjectenPage: React.FC = () => {
                   <div className="flex items-center gap-3 text-xs text-gray-500 mb-3">
                     <span className="inline-flex items-center gap-1"><MapPin className="w-3.5 h-3.5" />Rosmalen</span>
                     <span className="inline-flex items-center gap-1"><Calendar className="w-3.5 h-3.5" />November 2025</span>
-                    <span className="ml-auto">3 min</span>
                   </div>
                   <h3 className="text-lg sm:text-xl font-bold text-gray-900 leading-snug mb-3 group-hover:text-[#6BA539] transition-colors">
                     Urban Tree Pit Achter de Driesprong, Rosmalen
@@ -1344,7 +1341,6 @@ const ProjectenPage: React.FC = () => {
                     <span className="inline-flex items-center gap-1"><MapPin className="w-3.5 h-3.5" />Rotterdam</span>
                     <span className="inline-flex items-center gap-1"><Calendar className="w-3.5 h-3.5" />November 2025</span>
 
-                    <span className="ml-auto">5 min</span>
                   </div>
                   <h3 className="text-lg sm:text-xl font-bold text-gray-900 leading-snug mb-3 group-hover:text-[#6BA539] transition-colors">
                     Urban Tree Pits Sportpark DRL Rotterdam
@@ -1390,7 +1386,6 @@ const ProjectenPage: React.FC = () => {
                     <span className="inline-flex items-center gap-1"><MapPin className="w-3.5 h-3.5" />Rotterdam</span>
                     <span className="inline-flex items-center gap-1"><Calendar className="w-3.5 h-3.5" />November 2025</span>
 
-                    <span className="ml-auto">4 min</span>
                   </div>
                   <h3 className="text-lg sm:text-xl font-bold text-gray-900 leading-snug mb-3 group-hover:text-[#6BA539] transition-colors">
                     Urban Tree Pit Rotterdam LMO
