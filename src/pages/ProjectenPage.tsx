@@ -1000,6 +1000,62 @@ const RotterdamLMOStory: React.FC = () => <>
       </p>
     </div>
   </>;
+
+/* ─── Shared EXPANDED layout for the project cards ───
+   Mirrors the featured (Apeldoorn) card's compact horizontal header
+   (small thumbnail + meta/title/tags/"Lees minder") followed by the
+   detail panel, so every project's opened "Lees meer" view looks the
+   same as the featured one. Purely presentational and stateless — each
+   card still passes its OWN image/text/tags/story, so cards remain
+   independent (editing one card cannot affect another). ─── */
+const ProjectExpandedLayout: React.FC<{
+  img: string;
+  alt: string;
+  location: string;
+  date: string;
+  title: string;
+  tags?: string[];
+  onToggle: () => void;
+  children: React.ReactNode;
+}> = ({ img, alt, location, date, title, tags = [], onToggle, children }) => <>
+    <div className="flex flex-col sm:flex-row sm:items-stretch">
+      <div className="relative sm:w-56 md:w-64 lg:w-72 flex-shrink-0 aspect-[16/10] sm:aspect-auto overflow-hidden">
+        <img src={img} alt={alt} className="w-full h-full object-cover" />
+      </div>
+      <div className="flex-1 p-5 sm:p-6 flex flex-col justify-center">
+        <div className="flex items-center flex-wrap gap-x-3 gap-y-1 text-xs text-gray-500 mb-2">
+          <span className="inline-flex items-center gap-1"><MapPin className="w-3.5 h-3.5" />{location}</span>
+          <span className="inline-flex items-center gap-1"><Calendar className="w-3.5 h-3.5" />{date}</span>
+        </div>
+        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 leading-snug mb-3">
+          {title}
+        </h3>
+        <div className="flex items-center justify-between gap-4">
+          <div className="hidden md:flex flex-wrap gap-1.5">
+            {tags.map(t => <span key={t} className="inline-flex items-center rounded-full bg-[#6BA539]/10 text-[#4E8A25] font-medium border border-[#6BA539]/15 whitespace-nowrap px-2.5 py-1 text-xs">{t}</span>)}
+          </div>
+          <button
+            type="button"
+            onClick={(e) => { e.stopPropagation(); onToggle(); }}
+            aria-expanded={true}
+            className="ml-auto inline-flex items-center gap-1.5 text-[#6BA539] text-sm font-semibold hover:gap-2.5 transition-all"
+          >
+            Lees minder
+            <ChevronDown className="w-4 h-4 rotate-180 transition-transform duration-300" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div className="px-5 sm:px-6 pb-8 sm:pb-10 pt-2 cursor-default" onClick={(e) => e.stopPropagation()}>
+      <div className="pt-8 border-t border-gray-100">
+        <div className="max-w-3xl mx-auto space-y-6 text-gray-700 leading-relaxed text-base sm:text-lg">
+          {children}
+        </div>
+      </div>
+    </div>
+  </>;
+
 const ProjectenPage: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState<string>('Alle');
 
@@ -1246,29 +1302,38 @@ const ProjectenPage: React.FC = () => {
               }}
               className={`group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300 flex flex-col cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#6BA539]/40 focus:ring-offset-2 ${p2Open ? 'md:col-span-2 lg:col-span-3 shadow-xl' : 'hover:-translate-y-1 hover:scale-[1.01]'}`}
             >
-                <div className="relative aspect-[16/10] overflow-hidden">
-                  <img src="https://d64gsuwffb70l.cloudfront.net/682e0896b7c1872af32988f8_1776947387339_4d9ce797.jpeg" alt="Urban Tree Pits Ooltgensplaat" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                </div>
-                <div className="p-6 sm:p-7 flex-1 flex flex-col">
-                  <div className="flex items-center gap-3 text-xs text-gray-500 mb-3">
-                    <span className="inline-flex items-center gap-1"><MapPin className="w-3.5 h-3.5" />Ooltgensplaat</span>
-                    <span className="inline-flex items-center gap-1"><Calendar className="w-3.5 h-3.5" />Augustus 2025</span>
-                  </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 leading-snug mb-3 group-hover:text-[#6BA539] transition-colors">
-                    Urban Tree Pits Ooltgensplaat
-                  </h3>
-                  <button type="button" onClick={(e) => { e.stopPropagation(); setP2Open(o => !o); }} aria-expanded={p2Open} className="mt-5 ml-auto inline-flex items-center gap-1.5 text-[#6BA539] text-sm font-semibold group-hover:gap-2.5 transition-all">
-                    {p2Open ? 'Lees minder' : 'Lees meer'}
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${p2Open ? 'rotate-180' : ''}`} />
-                  </button>
-                  {p2Open && <div className="mt-8 pt-8 border-t border-gray-100 cursor-default" onClick={(e) => e.stopPropagation()}>
-                      <div className="max-w-3xl mx-auto space-y-6 text-gray-700 leading-relaxed text-base sm:text-lg">
-                        <OoltgensplaatGallery />
-                        <OoltgensplaatStory />
+                {p2Open ? (
+                  <ProjectExpandedLayout
+                    img="https://d64gsuwffb70l.cloudfront.net/682e0896b7c1872af32988f8_1776947387339_4d9ce797.jpeg"
+                    alt="Urban Tree Pits Ooltgensplaat"
+                    location="Ooltgensplaat"
+                    date="Augustus 2025"
+                    title="Urban Tree Pits Ooltgensplaat"
+                    onToggle={() => setP2Open(o => !o)}
+                  >
+                    <OoltgensplaatGallery />
+                    <OoltgensplaatStory />
+                  </ProjectExpandedLayout>
+                ) : (
+                  <>
+                    <div className="relative aspect-[16/10] overflow-hidden">
+                      <img src="https://d64gsuwffb70l.cloudfront.net/682e0896b7c1872af32988f8_1776947387339_4d9ce797.jpeg" alt="Urban Tree Pits Ooltgensplaat" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    </div>
+                    <div className="p-6 sm:p-7 flex-1 flex flex-col">
+                      <div className="flex items-center gap-3 text-xs text-gray-500 mb-3">
+                        <span className="inline-flex items-center gap-1"><MapPin className="w-3.5 h-3.5" />Ooltgensplaat</span>
+                        <span className="inline-flex items-center gap-1"><Calendar className="w-3.5 h-3.5" />Augustus 2025</span>
                       </div>
-                    </div>}
-
-                </div>
+                      <h3 className="text-lg sm:text-xl font-bold text-gray-900 leading-snug mb-3 group-hover:text-[#6BA539] transition-colors">
+                        Urban Tree Pits Ooltgensplaat
+                      </h3>
+                      <button type="button" onClick={(e) => { e.stopPropagation(); setP2Open(o => !o); }} aria-expanded={p2Open} className="mt-5 ml-auto inline-flex items-center gap-1.5 text-[#6BA539] text-sm font-semibold group-hover:gap-2.5 transition-all">
+                        Lees meer
+                        <ChevronDown className="w-4 h-4 transition-transform duration-300" />
+                      </button>
+                    </div>
+                  </>
+                )}
               </article>}
 
 
@@ -1286,36 +1351,46 @@ const ProjectenPage: React.FC = () => {
               }}
               className={`group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300 flex flex-col cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#6BA539]/40 focus:ring-offset-2 ${p3Open ? 'md:col-span-2 lg:col-span-3 shadow-xl' : 'hover:-translate-y-1 hover:scale-[1.01]'}`}
             >
-                <div className="relative aspect-[16/10] overflow-hidden">
-                  <img src="https://d64gsuwffb70l.cloudfront.net/682e0896b7c1872af32988f8_1776947477181_b65f5c57.jpg" alt="Urban Tree Pit Achter de Driesprong, Rosmalen" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                </div>
-                <div className="p-6 sm:p-7 flex-1 flex flex-col">
-                  <div className="flex items-center gap-3 text-xs text-gray-500 mb-3">
-                    <span className="inline-flex items-center gap-1"><MapPin className="w-3.5 h-3.5" />Rosmalen</span>
-                    <span className="inline-flex items-center gap-1"><Calendar className="w-3.5 h-3.5" />November 2025</span>
-                  </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 leading-snug mb-3 group-hover:text-[#6BA539] transition-colors">
-                    Urban Tree Pit Achter de Driesprong, Rosmalen
-                  </h3>
-
-                  <div className="mt-4 flex flex-wrap gap-1.5 lg:hidden">
-                    <span className="inline-flex items-center rounded-full bg-[#6BA539]/10 text-[#4E8A25] font-medium border border-[#6BA539]/15 whitespace-nowrap px-2.5 py-1 text-[11px] sm:text-xs">Wateroverlast</span>
-                    <span className="inline-flex items-center rounded-full bg-[#6BA539]/10 text-[#4E8A25] font-medium border border-[#6BA539]/15 whitespace-nowrap px-2.5 py-1 text-[11px] sm:text-xs">Kabels en leidingen</span>
-                    <span className="inline-flex items-center rounded-full bg-[#6BA539]/10 text-[#4E8A25] font-medium border border-[#6BA539]/15 whitespace-nowrap px-2.5 py-1 text-[11px] sm:text-xs">Hittestress</span>
-                  </div>
-
-                  <button type="button" onClick={(e) => { e.stopPropagation(); setP3Open(o => !o); }} aria-expanded={p3Open} className="mt-5 ml-auto inline-flex items-center gap-1.5 text-[#6BA539] text-sm font-semibold group-hover:gap-2.5 transition-all">
-                    {p3Open ? 'Lees minder' : 'Lees meer'}
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${p3Open ? 'rotate-180' : ''}`} />
-                  </button>
-                  {p3Open && <div className="mt-8 pt-8 border-t border-gray-100 cursor-default" onClick={(e) => e.stopPropagation()}>
-                      <div className="max-w-3xl mx-auto space-y-6 text-gray-700 leading-relaxed text-base sm:text-lg">
-                        <RosmalenGallery />
-                        <DeEikStory />
+                {p3Open ? (
+                  <ProjectExpandedLayout
+                    img="https://d64gsuwffb70l.cloudfront.net/682e0896b7c1872af32988f8_1776947477181_b65f5c57.jpg"
+                    alt="Urban Tree Pit Achter de Driesprong, Rosmalen"
+                    location="Rosmalen"
+                    date="November 2025"
+                    title="Urban Tree Pit Achter de Driesprong, Rosmalen"
+                    tags={['Wateroverlast', 'Kabels en leidingen', 'Hittestress']}
+                    onToggle={() => setP3Open(o => !o)}
+                  >
+                    <RosmalenGallery />
+                    <DeEikStory />
+                  </ProjectExpandedLayout>
+                ) : (
+                  <>
+                    <div className="relative aspect-[16/10] overflow-hidden">
+                      <img src="https://d64gsuwffb70l.cloudfront.net/682e0896b7c1872af32988f8_1776947477181_b65f5c57.jpg" alt="Urban Tree Pit Achter de Driesprong, Rosmalen" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    </div>
+                    <div className="p-6 sm:p-7 flex-1 flex flex-col">
+                      <div className="flex items-center gap-3 text-xs text-gray-500 mb-3">
+                        <span className="inline-flex items-center gap-1"><MapPin className="w-3.5 h-3.5" />Rosmalen</span>
+                        <span className="inline-flex items-center gap-1"><Calendar className="w-3.5 h-3.5" />November 2025</span>
                       </div>
-                    </div>}
+                      <h3 className="text-lg sm:text-xl font-bold text-gray-900 leading-snug mb-3 group-hover:text-[#6BA539] transition-colors">
+                        Urban Tree Pit Achter de Driesprong, Rosmalen
+                      </h3>
 
-                </div>
+                      <div className="mt-4 flex flex-wrap gap-1.5 lg:hidden">
+                        <span className="inline-flex items-center rounded-full bg-[#6BA539]/10 text-[#4E8A25] font-medium border border-[#6BA539]/15 whitespace-nowrap px-2.5 py-1 text-[11px] sm:text-xs">Wateroverlast</span>
+                        <span className="inline-flex items-center rounded-full bg-[#6BA539]/10 text-[#4E8A25] font-medium border border-[#6BA539]/15 whitespace-nowrap px-2.5 py-1 text-[11px] sm:text-xs">Kabels en leidingen</span>
+                        <span className="inline-flex items-center rounded-full bg-[#6BA539]/10 text-[#4E8A25] font-medium border border-[#6BA539]/15 whitespace-nowrap px-2.5 py-1 text-[11px] sm:text-xs">Hittestress</span>
+                      </div>
+
+                      <button type="button" onClick={(e) => { e.stopPropagation(); setP3Open(o => !o); }} aria-expanded={p3Open} className="mt-5 ml-auto inline-flex items-center gap-1.5 text-[#6BA539] text-sm font-semibold group-hover:gap-2.5 transition-all">
+                        Lees meer
+                        <ChevronDown className="w-4 h-4 transition-transform duration-300" />
+                      </button>
+                    </div>
+                  </>
+                )}
               </article>}
 
 
@@ -1333,34 +1408,44 @@ const ProjectenPage: React.FC = () => {
               }}
               className={`group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300 flex flex-col cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#6BA539]/40 focus:ring-offset-2 ${p4Open ? 'md:col-span-2 lg:col-span-3 shadow-xl' : 'hover:-translate-y-1 hover:scale-[1.01]'}`}
             >
-                <div className="relative aspect-[16/10] overflow-hidden">
-                  <img src="https://d64gsuwffb70l.cloudfront.net/682e0896b7c1872af32988f8_1777960991914_9abaedce.jpeg" alt="Urban Tree Pits Sportpark DRL Rotterdam — bloeiende tulpen langs het kunstgrasveld" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                </div>
-                <div className="p-6 sm:p-7 flex-1 flex flex-col">
-                  <div className="flex items-center gap-3 text-xs text-gray-500 mb-3">
-                    <span className="inline-flex items-center gap-1"><MapPin className="w-3.5 h-3.5" />Rotterdam</span>
-                    <span className="inline-flex items-center gap-1"><Calendar className="w-3.5 h-3.5" />November 2025</span>
-
-                  </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 leading-snug mb-3 group-hover:text-[#6BA539] transition-colors">
-                    Urban Tree Pits Sportpark DRL Rotterdam
-                  </h3>
-                  <div className="mt-4 flex flex-wrap gap-1.5 lg:hidden">
-                    <span className="inline-flex items-center rounded-full bg-[#6BA539]/10 text-[#4E8A25] font-medium border border-[#6BA539]/15 whitespace-nowrap px-2.5 py-1 text-[11px] sm:text-xs">Sportvelden</span>
-                    <span className="inline-flex items-center rounded-full bg-[#6BA539]/10 text-[#4E8A25] font-medium border border-[#6BA539]/15 whitespace-nowrap px-2.5 py-1 text-[11px] sm:text-xs">Hittestress</span>
-                    <span className="inline-flex items-center rounded-full bg-[#6BA539]/10 text-[#4E8A25] font-medium border border-[#6BA539]/15 whitespace-nowrap px-2.5 py-1 text-[11px] sm:text-xs">Biodiversiteit</span>
-                  </div>
-                  <button type="button" onClick={(e) => { e.stopPropagation(); setP4Open(o => !o); }} aria-expanded={p4Open} className="mt-5 ml-auto inline-flex items-center gap-1.5 text-[#6BA539] text-sm font-semibold group-hover:gap-2.5 transition-all">
-                    {p4Open ? 'Lees minder' : 'Lees meer'}
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${p4Open ? 'rotate-180' : ''}`} />
-                  </button>
-                  {p4Open && <div className="mt-8 pt-8 border-t border-gray-100 cursor-default" onClick={(e) => e.stopPropagation()}>
-                      <div className="max-w-3xl mx-auto space-y-6 text-gray-700 leading-relaxed text-base sm:text-lg">
-                        <SportparkDRLGallery />
-                        <SportparkDRLStory />
+                {p4Open ? (
+                  <ProjectExpandedLayout
+                    img="https://d64gsuwffb70l.cloudfront.net/682e0896b7c1872af32988f8_1777960991914_9abaedce.jpeg"
+                    alt="Urban Tree Pits Sportpark DRL Rotterdam — bloeiende tulpen langs het kunstgrasveld"
+                    location="Rotterdam"
+                    date="November 2025"
+                    title="Urban Tree Pits Sportpark DRL Rotterdam"
+                    tags={['Sportvelden', 'Hittestress', 'Biodiversiteit']}
+                    onToggle={() => setP4Open(o => !o)}
+                  >
+                    <SportparkDRLGallery />
+                    <SportparkDRLStory />
+                  </ProjectExpandedLayout>
+                ) : (
+                  <>
+                    <div className="relative aspect-[16/10] overflow-hidden">
+                      <img src="https://d64gsuwffb70l.cloudfront.net/682e0896b7c1872af32988f8_1777960991914_9abaedce.jpeg" alt="Urban Tree Pits Sportpark DRL Rotterdam — bloeiende tulpen langs het kunstgrasveld" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    </div>
+                    <div className="p-6 sm:p-7 flex-1 flex flex-col">
+                      <div className="flex items-center gap-3 text-xs text-gray-500 mb-3">
+                        <span className="inline-flex items-center gap-1"><MapPin className="w-3.5 h-3.5" />Rotterdam</span>
+                        <span className="inline-flex items-center gap-1"><Calendar className="w-3.5 h-3.5" />November 2025</span>
                       </div>
-                    </div>}
-                </div>
+                      <h3 className="text-lg sm:text-xl font-bold text-gray-900 leading-snug mb-3 group-hover:text-[#6BA539] transition-colors">
+                        Urban Tree Pits Sportpark DRL Rotterdam
+                      </h3>
+                      <div className="mt-4 flex flex-wrap gap-1.5 lg:hidden">
+                        <span className="inline-flex items-center rounded-full bg-[#6BA539]/10 text-[#4E8A25] font-medium border border-[#6BA539]/15 whitespace-nowrap px-2.5 py-1 text-[11px] sm:text-xs">Sportvelden</span>
+                        <span className="inline-flex items-center rounded-full bg-[#6BA539]/10 text-[#4E8A25] font-medium border border-[#6BA539]/15 whitespace-nowrap px-2.5 py-1 text-[11px] sm:text-xs">Hittestress</span>
+                        <span className="inline-flex items-center rounded-full bg-[#6BA539]/10 text-[#4E8A25] font-medium border border-[#6BA539]/15 whitespace-nowrap px-2.5 py-1 text-[11px] sm:text-xs">Biodiversiteit</span>
+                      </div>
+                      <button type="button" onClick={(e) => { e.stopPropagation(); setP4Open(o => !o); }} aria-expanded={p4Open} className="mt-5 ml-auto inline-flex items-center gap-1.5 text-[#6BA539] text-sm font-semibold group-hover:gap-2.5 transition-all">
+                        Lees meer
+                        <ChevronDown className="w-4 h-4 transition-transform duration-300" />
+                      </button>
+                    </div>
+                  </>
+                )}
               </article>}
 
 
@@ -1378,34 +1463,44 @@ const ProjectenPage: React.FC = () => {
               }}
               className={`group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300 flex flex-col cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#6BA539]/40 focus:ring-offset-2 ${p5Open ? 'md:col-span-2 lg:col-span-3 shadow-xl' : 'hover:-translate-y-1 hover:scale-[1.01]'}`}
             >
-                <div className="relative aspect-[16/10] overflow-hidden">
-                  <img src="https://d64gsuwffb70l.cloudfront.net/682e0896b7c1872af32988f8_1777961688315_d7b9019d.jpg" alt="Urban Tree Pits Rotterdam LMO — aangeplante haagbeuk in Urban Tree Pit met voetbalveld op de achtergrond" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
-                </div>
-                <div className="p-6 sm:p-7 flex-1 flex flex-col">
-                  <div className="flex items-center gap-3 text-xs text-gray-500 mb-3">
-                    <span className="inline-flex items-center gap-1"><MapPin className="w-3.5 h-3.5" />Rotterdam</span>
-                    <span className="inline-flex items-center gap-1"><Calendar className="w-3.5 h-3.5" />November 2025</span>
-
-                  </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 leading-snug mb-3 group-hover:text-[#6BA539] transition-colors">
-                    Urban Tree Pit Rotterdam LMO
-                  </h3>
-                  <div className="mt-4 flex flex-wrap gap-1.5 lg:hidden">
-                    <span className="inline-flex items-center rounded-full bg-[#6BA539]/10 text-[#4E8A25] font-medium border border-[#6BA539]/15 whitespace-nowrap px-2.5 py-1 text-[11px] sm:text-xs">Sportvelden</span>
-                    <span className="inline-flex items-center rounded-full bg-[#6BA539]/10 text-[#4E8A25] font-medium border border-[#6BA539]/15 whitespace-nowrap px-2.5 py-1 text-[11px] sm:text-xs">Hittestress</span>
-                  </div>
-
-                  <button type="button" onClick={(e) => { e.stopPropagation(); setP5Open(o => !o); }} aria-expanded={p5Open} className="mt-5 ml-auto inline-flex items-center gap-1.5 text-[#6BA539] text-sm font-semibold group-hover:gap-2.5 transition-all">
-                    {p5Open ? 'Lees minder' : 'Lees meer'}
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${p5Open ? 'rotate-180' : ''}`} />
-                  </button>
-                  {p5Open && <div className="mt-8 pt-8 border-t border-gray-100 cursor-default" onClick={(e) => e.stopPropagation()}>
-                      <div className="max-w-3xl mx-auto space-y-6 text-gray-700 leading-relaxed text-base sm:text-lg">
-                        <RotterdamLMOGallery />
-                        <RotterdamLMOStory />
+                {p5Open ? (
+                  <ProjectExpandedLayout
+                    img="https://d64gsuwffb70l.cloudfront.net/682e0896b7c1872af32988f8_1777961688315_d7b9019d.jpg"
+                    alt="Urban Tree Pits Rotterdam LMO — aangeplante haagbeuk in Urban Tree Pit met voetbalveld op de achtergrond"
+                    location="Rotterdam"
+                    date="November 2025"
+                    title="Urban Tree Pit Rotterdam LMO"
+                    tags={['Sportvelden', 'Hittestress']}
+                    onToggle={() => setP5Open(o => !o)}
+                  >
+                    <RotterdamLMOGallery />
+                    <RotterdamLMOStory />
+                  </ProjectExpandedLayout>
+                ) : (
+                  <>
+                    <div className="relative aspect-[16/10] overflow-hidden">
+                      <img src="https://d64gsuwffb70l.cloudfront.net/682e0896b7c1872af32988f8_1777961688315_d7b9019d.jpg" alt="Urban Tree Pits Rotterdam LMO — aangeplante haagbeuk in Urban Tree Pit met voetbalveld op de achtergrond" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
+                    </div>
+                    <div className="p-6 sm:p-7 flex-1 flex flex-col">
+                      <div className="flex items-center gap-3 text-xs text-gray-500 mb-3">
+                        <span className="inline-flex items-center gap-1"><MapPin className="w-3.5 h-3.5" />Rotterdam</span>
+                        <span className="inline-flex items-center gap-1"><Calendar className="w-3.5 h-3.5" />November 2025</span>
                       </div>
-                    </div>}
-                </div>
+                      <h3 className="text-lg sm:text-xl font-bold text-gray-900 leading-snug mb-3 group-hover:text-[#6BA539] transition-colors">
+                        Urban Tree Pit Rotterdam LMO
+                      </h3>
+                      <div className="mt-4 flex flex-wrap gap-1.5 lg:hidden">
+                        <span className="inline-flex items-center rounded-full bg-[#6BA539]/10 text-[#4E8A25] font-medium border border-[#6BA539]/15 whitespace-nowrap px-2.5 py-1 text-[11px] sm:text-xs">Sportvelden</span>
+                        <span className="inline-flex items-center rounded-full bg-[#6BA539]/10 text-[#4E8A25] font-medium border border-[#6BA539]/15 whitespace-nowrap px-2.5 py-1 text-[11px] sm:text-xs">Hittestress</span>
+                      </div>
+
+                      <button type="button" onClick={(e) => { e.stopPropagation(); setP5Open(o => !o); }} aria-expanded={p5Open} className="mt-5 ml-auto inline-flex items-center gap-1.5 text-[#6BA539] text-sm font-semibold group-hover:gap-2.5 transition-all">
+                        Lees meer
+                        <ChevronDown className="w-4 h-4 transition-transform duration-300" />
+                      </button>
+                    </div>
+                  </>
+                )}
               </article>}
 
 
