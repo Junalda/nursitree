@@ -426,7 +426,7 @@ const SPORTPARK_DRL_GALLERY: { src: string; alt: string; caption: string }[] = [
   {
     src: 'https://d64gsuwffb70l.cloudfront.net/682e0896b7c1872af32988f8_1777960996024_ba5ceb7c.JPG',
     alt: 'Werkers in oranje veiligheidskleding plaatsen Urban Tree Pits op het tussenpad naast het kunstgrasveld van Sportpark DRL Rotterdam',
-    caption: 'Techniek — werkers plaatsen de Urban Tree Pits op het tussenpad',
+    caption: 'Techniek — plaatsen de Urban Tree Pits op het tussenpad',
   },
   {
     src: 'https://d64gsuwffb70l.cloudfront.net/682e0896b7c1872af32988f8_1777960993068_e91be624.jpg',
