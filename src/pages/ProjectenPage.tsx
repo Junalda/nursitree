@@ -181,7 +181,7 @@ const OOLTGENSPLAAT_GALLERY: { src: string; alt: string; caption: string }[] = [
   {
     src: 'https://d64gsuwffb70l.cloudfront.net/682e0896b7c1872af32988f8_1777960245743_dcb7b4b1.jpeg',
     alt: 'Technisch detail van de Urban Tree Pit in Ooltgensplaat met aansluitingen voor waterhuishouding, overstort en sensor voor groeimetingen',
-    caption: 'Techniek — aansluitingen voor watermanagement en sensor voor groeimetingen',
+    caption: 'Techniek — Plaatsen van de Levelingunits voor het watermanagement binnen de Urban Tree Pits',
   },
   {
     src: 'https://d64gsuwffb70l.cloudfront.net/682e0896b7c1872af32988f8_1777960247964_2e878a47.jpeg',
@@ -539,7 +539,7 @@ const ROTTERDAM_LMO_GALLERY: { src: string; alt: string; caption: string }[] = [
   {
     src: 'https://d64gsuwffb70l.cloudfront.net/682e0896b7c1872af32988f8_1777961686544_9f64fa9d.jpg',
     alt: 'BRENT Urban Tree Pit van prefab beton hangt aan de kraan van een rode vrachtwagen boven de uitgegraven bouwput bij voetbalvereniging LMO Rotterdam',
-    caption: 'Context — de prefab betonnen Urban Tree Pit wordt aangevoerd en boven de bouwput gepositioneerd',
+    caption: 'Context — de prefab betonnen Urban Tree Pit wordt aangevoerd en geplaatst',
   },
   {
     src: 'https://d64gsuwffb70l.cloudfront.net/682e0896b7c1872af32988f8_1777961687575_b01bb449.jpg',
@@ -554,7 +554,7 @@ const ROTTERDAM_LMO_GALLERY: { src: string; alt: string; caption: string }[] = [
   {
     src: 'https://d64gsuwffb70l.cloudfront.net/682e0896b7c1872af32988f8_1777961689154_c20f9f24.jpg',
     alt: 'Geplante boom in de Urban Tree Pit bij LMO Rotterdam, geïntegreerd in de openbare ruimte met bestrating, lantaarnpaal en bestaande beplanting in herfstkleuren',
-    caption: 'Integratie — de boom is geïntegreerd in de openbare ruimte, klaar voor monitoring binnen de pilot Rotterdam',
+    caption: 'Integratie — de boom is geïntegreerd in de openbare ruimte.',
   },
 ];
 
@@ -790,7 +790,7 @@ const OoltgensplaatStory: React.FC = () => <>
         <span className="font-semibold">Jaar : augustus 2025</span>
       </p>
       <p>
-        <span className="font-semibold">Provincie : Ooltgensplaat</span>
+        <span className="font-semibold">Provincie : Zuid-Holland</span>
       </p>
     </div>
   </>;
