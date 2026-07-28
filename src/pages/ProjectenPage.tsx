@@ -867,7 +867,7 @@ const DeEikStory: React.FC = () => <>
         <span className="font-semibold">Jaar : november 2025</span>
       </p>
       <p>
-        <span className="font-semibold">Provincie : Noord Brabant</span>
+        <span className="font-semibold">Provincie : Noord-Brabant</span>
       </p>
     </div>
   </>;
