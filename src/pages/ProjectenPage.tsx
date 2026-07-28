@@ -300,7 +300,7 @@ const ROSMALEN_GALLERY: { src: string; alt: string; caption: string }[] = [
   {
     src: 'https://d64gsuwffb70l.cloudfront.net/682e0896b7c1872af32988f8_1777960638632_5c01fb05.JPG',
     alt: 'BRENT Urban Tree Pit waterreservoir wordt met een kraan in de bouwput geplaatst in het winkelgebied Achter de Driesprong in Rosmalen',
-    caption: 'Oplossing — het BRENT Urban Tree Pit reservoir wordt op zijn plek gehesen',
+    caption: 'Oplossing — De BRENT Urban Tree Pit wordt op zijn plek gehesen',
   },
   {
     src: 'https://d64gsuwffb70l.cloudfront.net/682e0896b7c1872af32988f8_1777960637699_30c20aa8.JPG',
