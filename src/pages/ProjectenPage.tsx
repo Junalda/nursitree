@@ -863,6 +863,12 @@ const DeEikStory: React.FC = () => <>
       <p>
         <span className="font-semibold">Aantal : 1 BRENT Urban Tree Pit</span>
       </p>
+      <p>
+        <span className="font-semibold">Jaar : november 2025</span>
+      </p>
+      <p>
+        <span className="font-semibold">Provincie : Noord Brabant</span>
+      </p>
     </div>
   </>;
 
