@@ -94,7 +94,7 @@ const ZwhIntro: React.FC = () => {
             {features.map((f, i) => (
               <div
                 key={f.title}
-                className={`group p-8 rounded-2xl bg-white/15 backdrop-blur-sm border border-white/20 hover:bg-white/25 hover:border-white/40 transition-all duration-500 ${
+                className={`group p-8 rounded-2xl bg-white/15 backdrop-blur-sm border border-white/20 shadow-lg hover:bg-white/25 hover:border-white/40 hover:shadow-xl transition-all duration-500 ${
                   visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                 }`}
                 style={{ transitionDelay: visible ? `${200 + i * 100}ms` : '0ms' }}
