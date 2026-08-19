@@ -84,9 +84,8 @@ const ZwhIntro: React.FC = () => {
             <p className="text-lg text-white/80 leading-relaxed">
               We hebben BRENT ontwikkeld voor iedereen die actief werkt aan de invulling
               van steden en andere drukbevolkte buitenruimtes. Mensen die hun projecten
-              graag groener, maar ook simpeler willen maken. Zodat de doorlooptijd korter
-              wordt, er minder fouten worden gemaakt en er onderaan de streep meer
-              overblijft.
+              graag groener, maar ook simpeler willen maken. Zo is de doorlooptijd
+              korter, maken we minder fouten en blijft onderaan de streep meer over.
             </p>
           </div>
 
