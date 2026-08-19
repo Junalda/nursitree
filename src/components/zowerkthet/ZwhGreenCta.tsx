@@ -56,7 +56,7 @@ const ZwhGreenCta: React.FC = () => {
           Laten we kennismaken
         </h2>
         <p className="text-lg text-white/85 mb-12 max-w-2xl mx-auto leading-relaxed">
-          Ontdek hoe BRENT past binnen jouw project. We denken graag met je mee over de beste oplossing voor stedelijke vergroening.
+          Ontdek hoe BRENT binnen jouw project past. We denken graag met je mee over de beste oplossing voor stedelijke vergroening.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
