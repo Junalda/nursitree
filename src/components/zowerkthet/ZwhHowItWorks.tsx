@@ -65,7 +65,7 @@ const ZwhHowItWorks: React.FC = () => {
           </h2>
           <p className="text-lg text-gray-500 leading-relaxed">
             Vier kernprincipes maken BRENT tot de meest doordachte groeiplaats voor
-            stedelijke bomen.
+            stedelijke&nbsp;bomen.
           </p>
         </div>
 
