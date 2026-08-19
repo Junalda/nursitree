@@ -11,7 +11,7 @@ const features = [
   },
   {
     title: 'Kortere doorlooptijd',
-    desc: 'Gestandaardiseerd systeem dat de bouwtijd aanzienlijk verkort.',
+    desc: 'Ons gestandaardiseerde systeem verkort de bouwtijd aanzienlijk.',
   },
   {
     title: 'Minder fouten',
