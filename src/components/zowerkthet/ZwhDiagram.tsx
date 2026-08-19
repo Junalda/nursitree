@@ -3,7 +3,7 @@ const DIAGRAM_IMG = 'https://d64gsuwffb70l.cloudfront.net/69cd2e1dc76c2b3ecc191d
 const callouts = [{
   text: 'Geschikt voor alle boomsoorten'
 }, {
-  text: 'Volledige integratie in (bestaand) maaiveld. Meerdere combinaties mogelijk'
+  text: 'Meerdere combinaties mogelijk voor volledige integratie in (bestaand) maaiveld'
 }, {
   text: 'Bomengrond met hoog organische stofgehalte'
 }, {
