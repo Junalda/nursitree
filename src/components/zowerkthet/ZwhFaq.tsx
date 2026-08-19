@@ -13,7 +13,7 @@ const FaqAccordionItem: React.FC<{
   onToggle,
   index,
   visible
-}) => <div className={`border border-gray-100 rounded-2xl overflow-hidden transition-all duration-500 ${isOpen ? 'bg-white shadow-lg border-[#6BA539]/20' : 'bg-gray-50 hover:bg-white hover:shadow-sm'} ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`} style={{
+}) => <div className={`border border-gray-200 rounded-2xl overflow-hidden transition-all duration-500 ${isOpen ? 'bg-white shadow-lg border-[#6BA539]/20' : 'bg-white shadow-sm hover:shadow-md'} ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`} style={{
   transitionDelay: visible ? `${150 + index * 60}ms` : '0ms'
 }}>
     <button onClick={onToggle} className="w-full flex items-center justify-between p-6 sm:p-7 text-left">
@@ -80,7 +80,7 @@ const ZwhFaq: React.FC = () => {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mt-4 mb-6 tracking-tight">
             Veelgestelde vragen
           </h2>
-          <p className="text-lg text-gray-500 leading-relaxed max-w-2xl mx-auto">Alles wat je wilt weten over BRENT, van technische specificaties tot praktische toepassingen.</p>
+          <p className="text-lg text-gray-500 leading-relaxed max-w-2xl mx-auto">Alles wat je wilt weten over BRENT,<br className="hidden sm:inline" /> van technische specificaties tot praktische toepassingen.</p>
         </div>
 
         {/* Accordion */}
