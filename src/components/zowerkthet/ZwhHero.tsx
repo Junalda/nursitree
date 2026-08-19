@@ -49,7 +49,7 @@ const ZwhHero: React.FC = () => {
               in de stad
             </h1>
 
-            <p className="text-base sm:text-lg md:text-xl text-gray-500 leading-relaxed mb-8 sm:mb-12 max-w-lg text-left">Na maanden testen, tekenen, puzzelen en nog meer testen, werd BRENT geboren, onze allereerste Urban Tree Pit. De enige groeiplaats waarmee je gezonde en grote bomen kweekt, op plekken waar weinig ruimte is.</p>
+            <p className="text-base sm:text-lg md:text-xl text-gray-500 leading-relaxed mb-8 sm:mb-12 max-w-lg text-left">Na maanden testen, tekenen, puzzelen en nog meer testen, werd BRENT geboren, onze allereerste Urban Tree Pit. De enige groeiplaats waarmee je gezonde en grote bomen kweekt, op plekken waar weinig&nbsp;ruimte&nbsp;is.</p>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <button onClick={scrollToProduct} className="px-6 sm:px-8 py-3.5 sm:py-4 bg-[#E8854A] text-white text-sm sm:text-base font-semibold rounded-xl hover:bg-[#D27337] transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
