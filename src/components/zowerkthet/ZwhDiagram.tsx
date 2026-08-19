@@ -47,7 +47,7 @@ const ZwhDiagram: React.FC = () => {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mt-4 mb-6 tracking-tight">
             Alles in <span className="text-[#6BA539]">één systeem</span>
           </h2>
-          <p className="text-lg text-gray-500 leading-relaxed">Elk onderdeel van BRENT is ontworpen om samen te werken  van maaiveld tot waterreservoir.</p>
+          <p className="text-lg text-gray-500 leading-relaxed">Elk onderdeel van BRENT is ontworpen om samen te werken  van&nbsp;maaiveld&nbsp;tot&nbsp;waterreservoir.</p>
         </div>
 
         {/* Diagram layout */}
