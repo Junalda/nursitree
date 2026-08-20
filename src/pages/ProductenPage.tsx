@@ -423,7 +423,7 @@ De natuurlijke verspreiding zorgt ervoor dat de bollen zich in de kweekperiode g
               </div>
               <div className="order-3 lg:order-none">
                 <p className="text-[15px] sm:text-base text-gray-500 leading-relaxed mb-7 whitespace-pre-line">
-                  Wij begrijpen dat elke locatie uniek is en vraagt om een specifieke aanpak. Daarom
+                  Elke locatie is uniek en vraagt om een specifieke aanpak. Daarom
                   bieden wij maatwerkoplossingen die aansluiten op de situatie, omgeving en wensen van
                   het project.
                 </p>
