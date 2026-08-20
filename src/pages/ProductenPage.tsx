@@ -61,7 +61,7 @@ De levensduur van de beplanting is vergelijkbaar met de omlooptijd van de boom i
 
 De natuurlijke verspreiding zorgt ervoor dat de bollen zich in de kweekperiode gaan vermeerderen. Bij het verplanten van de boom worden alle bollen meegenomen, wat op de nieuwe locatie ook voor een biodiversiteitstoevoeging zorgt.`;
   const bollenSpecs: SpecItem[] = ['Vast bloembollenmengsel met 12 soorten', 'Bloeiperiode januari t/m juli', 'Maatwerk bloembollenmengsels toepassen is mogelijk'];
-  const fullText = `Wanneer de parkeerdruk hoog is, is inplanten geen optie. Voor de erg krappe ruimtes is topcover ‘Full’ ontwikkeld. Bij deze afdekking wordt de Urban Tree Pit bijna volledig afdekt met 2 afdekplaten, met een boomspiegel van 1 m x 1 m. Bij voorkeur wordt dit ingeplant. We hebben een standaardafwerking van de plaat, maar maatwerk is ook mogelijk. Op deze manier sluit het geheel naadloos aan bij de omgeving.`;
+  const fullText = `Bij hoge parkeerdruk is inplanten geen optie. Voor dit soort krappe ruimtes is de topcover ‘Full’ ontwikkeld. Bij deze afdekking wordt de Urban Tree Pit bijna volledig afdekt met 2 afdekplaten, met een boomspiegel van 1 m x 1 m. Bij voorkeur wordt dit ingeplant. We hebben een standaardafwerking van de plaat, maar maatwerk is ook mogelijk. Op deze manier sluit het geheel naadloos aan bij de omgeving.`;
   const fullSpecs: SpecItem[] = ['1,65 m x 2,5 m x 0,20 m (l x b x h)', 'Opening van 1 m x 1 m (l x b)', 'Levensduur ten minste 100 jaar', 'Geschikt voor diverse verkeersklassen', 'Gewicht 2.300 kg', 'Standaard afgewerkt met antislipprofiel', 'Maatwerkafwerking mogelijk'];
   const partlyText = `Topcover ‘Partly’ is geschikt voor locaties met bovengronds meer ruimte dan bij ‘Full’. In deze situaties is de boomspiegel groter en wordt meer onderbeplanting toegepast. Ook bij deze plaat hebben we een standaardafwerking en is maatwerk mogelijk.`;
   const partlySpecs: SpecItem[] = ['1,65 m x 2,5 m x 0,20 m (l x b x h)', 'Opening van 1,90 m x 1,30 m (l x b)', 'Levensduur ten minste 100 jaar', 'Geschikt voor diverse verkeersklassen', 'Gewicht 2.100 kg', 'Standaard afgewerkt met antislipprofiel', 'Maatwerkafwerking mogelijk'];
@@ -228,8 +228,9 @@ De natuurlijke verspreiding zorgt ervoor dat de bollen zich in de kweekperiode g
             Add-ons
           </h2>
           <p className="text-base sm:text-lg text-gray-500 leading-relaxed max-w-3xl mx-auto">
-            Maak elke Urban Tree Pit compleet met passende beplanting, afdekkingen en op maat
-            gemaakte straatmeubilair.
+            Maak elke Urban Tree Pit compleet met passende beplanting,
+            <br />
+            afdekkingen en op maat gemaakt straatmeubilair.
           </p>
         </div>
       </section>
