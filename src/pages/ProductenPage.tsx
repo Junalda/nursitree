@@ -50,13 +50,13 @@ const ProductenPage: React.FC = () => {
   // -------- Specs --------
   const brentSpecs: SpecItem[] = ['3,30 m x 2,5 m x 1,30 m (l x b x h)', '7 m³ groeiruimte', '1.200 liter waterreservoir (genoeg voor gemiddelde droge periode van 21 dagen)', 'Levensduur ten minste 100 jaar', '15-20 jaar omlooptijd boom in het systeem', 'Geschikt voor verkeersklasse C250', 'Leeggewicht 8.500 kg', 'In- en uitlaat 125 mm'];
   const levelingSpecs: SpecItem[] = ['Aan te sluiten op meerdere Urban Tree Pits', 'Bezinkput + vlotterunit', 'Diameter buizen 315 mm', 'Afdekking met putdeksels naar keuze', 'Jaarlijks inspectie op verontreiniging en werking vlottersysteem', 'Aansluitingen 125 mm', 'Afmetingen bodemplaat: 120 cm x 80 cm x 18 cm (l x b x h)'];
-  const beplantingText = `Een extra bijdrage aan de biodiversiteit lever je door de Urban Tree Pit niet af te dekken en volledig in te planten. We hebben hiervoor plantenmengsels samengesteld die bestaan uit soorten die interessant zijn voor de biodiversiteit en een zo lang mogelijke bloei geven. Uiteraard is het ook mogelijk om zelf soorten te kiezen.
+  const beplantingText = `Door de Urban Tree Pit niet af te dekken, maar volledig in te planten, lever je een extra bijdrage aan de biodiversiteit. Hiervoor hebben we (verschillende) plantenmengsels samengesteld die bestaan uit soorten die interessant zijn voor de biodiversiteit en een zo lang mogelijke bloei geven. Uiteraard is het ook mogelijk om zelf soorten te kiezen.
 
 De levensduur van de beplanting is vergelijkbaar met de omlooptijd van de boom in de Urban Tree Pit. Een deel van de beplanting zal met de verplanting van de boom meeverhuizen naar de nieuwe plek. Hier zorgt het ook voor een impuls aan de biodiversiteit.`;
   const beplantingSpecs: SpecItem[] = [{
     text: '5 vaste plantenmengsels:',
     sub: ['Felle kleuren', 'Oranjepaars', 'Paarsblauw', 'Roze', 'Witgeel']
-  }, 'Bloeiperiode april t/m oktober, afhankelijk van mengsel', 'Maatwerk plantenmengsel toepassen mogelijk'];
+  }, 'Bloeiperiode april t/m oktober, afhankelijk van mengsel', 'Maatwerk plantenmengsel(s) mogelijk'];
   const bollenText = `De beplanting in de Urban Tree Pits is ook te combineren met bloembollen, wat ervoor zorgt dat je bijna jaarrond bloeiende planten hebt. In de winter gaan de eerste soorten al bloeien, wat doorloopt tot ver in het voorjaar. Eén soort bloeit zelfs volledig in de zomer. De bloembollen en vaste planten wisselen elkaar op een natuurlijke manier af.
 
 De natuurlijke verspreiding zorgt ervoor dat de bollen zich in de kweekperiode gaan vermeerderen. Bij het verplanten van de boom worden alle bollen meegenomen, wat op de nieuwe locatie ook voor een biodiversiteitstoevoeging zorgt.`;
