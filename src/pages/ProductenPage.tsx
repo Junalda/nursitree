@@ -108,7 +108,7 @@ De natuurlijke verspreiding zorgt ervoor dat de bollen zich in de kweekperiode g
           <p className="text-base sm:text-lg md:text-xl text-gray-500 leading-relaxed max-w-3xl text-left">
             Met de gestandaardiseerde Urban Tree Pits creëren we de basis voor een gezonde groei
             van de bomen. De afdekkingsmogelijkheden zijn oneindig en maken het volledig
-            integreerbaar in je gebied. Voor de veelvoorkomende situaties zijn standaardafdekkingen
+            integreerbaar in je gebied. Voor de veelvoorkomende situaties zijn kant-en-klare oplossingen
             beschikbaar.
           </p>
         </div>
