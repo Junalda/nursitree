@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Info } from 'lucide-react';
+import { ArrowRight, Info, Download } from 'lucide-react';
 import PageLayout from '@/components/PageLayout';
 import SEO from '@/components/SEO';
 
@@ -445,11 +445,46 @@ De natuurlijke verspreiding zorgt ervoor dat de bollen zich in de kweekperiode g
         </div>
       </section>
 
+      {/* DOWNLOAD — green segment above the CTA */}
+      <section className="relative z-[2] overflow-hidden" style={{ marginBottom: '-1px' }}>
+        {/* Green base */}
+        <div
+          className="absolute inset-0"
+          style={{ background: 'linear-gradient(135deg, #4E8A25 0%, #6BA539 100%)' }}
+          aria-hidden="true"
+        />
+        {/* Subtle depth overlay */}
+        <div
+          className="absolute inset-0"
+          style={{ background: 'linear-gradient(255deg, rgba(0,0,0,0.06) 0%, transparent 45%, rgba(255,255,255,0.08) 100%)' }}
+          aria-hidden="true"
+        />
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 text-center">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight tracking-tight">
+            Download de productbrochure
+          </h2>
+          <p className="text-lg text-white/85 mb-10 max-w-2xl mx-auto leading-relaxed">
+            Alle specificaties, add-ons en toepassingen van BRENT overzichtelijk in één document.
+          </p>
+          <div className="flex items-center justify-center">
+            <a
+              href="/brent-productbrochure.pdf"
+              download
+              className="px-8 py-4 rounded-xl text-base font-semibold transition-all duration-200 shadow-lg hover:shadow-xl flex items-center gap-2 bg-white text-[#6BA539] hover:bg-gray-50"
+            >
+              <Download className="w-5 h-5" />
+              Download brochure
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
-      <section className="relative z-[2] bg-gray-50" style={{
+      <section className="relative z-[2]" style={{
       paddingTop: '3rem',
       paddingBottom: '10rem',
-      marginBottom: '-2px'
+      marginBottom: '-2px',
+      background: 'linear-gradient(135deg, #4E8A25 0%, #6BA539 100%)'
     }}>
         <div
           className="absolute left-0 right-0 bottom-0 h-10 bg-[#182418]"
