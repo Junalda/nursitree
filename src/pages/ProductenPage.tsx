@@ -48,7 +48,7 @@ const secondaryBtn = 'inline-flex items-center justify-center gap-2 px-6 py-3.5 
 
 const ProductenPage: React.FC = () => {
   // -------- Specs --------
-  const brentSpecs: SpecItem[] = ['3,30 m x 2,5 m x 1,30 m (l x b x h)', '7 m³ groeiruimte', '1.200 liter waterreservoir (genoeg voor gemiddelde droge periode van 21 dagen).', 'Levensduur ten minste 100 jaar', '15-20 jaar omlooptijd boom in het systeem', 'Geschikt voor verkeersklasse C250', 'Leeggewicht 8.500 kg', 'In- en uitlaat 125 mm'];
+  const brentSpecs: SpecItem[] = ['3,30 m x 2,5 m x 1,30 m (l x b x h)', '7 m³ groeiruimte', '1.200 liter waterreservoir (genoeg voor gemiddelde droge periode van 21 dagen)', 'Levensduur ten minste 100 jaar', '15-20 jaar omlooptijd boom in het systeem', 'Geschikt voor verkeersklasse C250', 'Leeggewicht 8.500 kg', 'In- en uitlaat 125 mm'];
   const levelingSpecs: SpecItem[] = ['Aan te sluiten op meerdere Urban Tree Pits', 'Bezinkput + vlotterunit', 'Diameter buizen 315 mm', 'Afdekking met putdeksels naar keuze', 'Jaarlijks inspectie op verontreiniging en werking vlottersysteem', 'Aansluitingen 125 mm', 'Afmetingen bodemplaat: 120 cm x 80 cm x 18 cm (l x b x h)'];
   const beplantingText = `Een extra bijdrage aan de biodiversiteit lever je door de Urban Tree Pit niet af te dekken en volledig in te planten. We hebben hiervoor plantenmengsels samengesteld die bestaan uit soorten die interessant zijn voor de biodiversiteit en een zo lang mogelijke bloei geven. Uiteraard is het ook mogelijk om zelf soorten te kiezen.
 
@@ -136,13 +136,15 @@ De natuurlijke verspreiding zorgt ervoor dat de bollen zich in de kweekperiode g
                   zoekende wortels die in kabels verstrikt raken of bomen die niet tot hun volle
                   potentie groeien omdat er te weinig voedingsstoffen zijn.
                 </p>
+                <div className="mb-8 flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
+                  <Link to="/zo-werkt-het" className={primaryBtn}>Zo werkt het</Link>
+                </div>
                 <div className="border-t border-gray-200 pt-8">
                   <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-900 mb-5">Specificaties</h3>
                   <SpecList items={brentSpecs} />
                 </div>
                 <div className="mt-10 flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
-                  <Link to="/zo-werkt-het" className={primaryBtn}>Zo werkt het</Link>
-                  <Link to="/#contact-section" className={secondaryBtn}>
+                  <Link to="/#contact-section" className={primaryBtn}>
                     <Info className="w-4 h-4" />
                     Vraag productinformatie op
                   </Link>
