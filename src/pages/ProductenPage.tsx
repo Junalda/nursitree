@@ -178,10 +178,12 @@ De natuurlijke verspreiding zorgt ervoor dat de bollen zich in de kweekperiode g
               <div className="order-3 lg:order-none">
                 <p className="text-base sm:text-lg text-gray-500 leading-relaxed mb-8">
                   Voor een gezonde groei is de waterhuishouding erg belangrijk. Het systeem is te
-                  voeden op grond- en hemelwater. De Levelingunit zorgt ervoor dat nooit te veel
+                  voeden op grond- en hemelwater.
+                  <br />
+                  De Levelingunit zorgt ervoor dat nooit te veel
                   water in de Urban Tree Pit terecht komt. Wanneer het waterreservoir vol is, sluit
-                  de klep. De bomen in de Urban Tree Pits wortelen in sommige situaties daardoor
-                  dieper dan het omliggende grondwater.
+                  de klep. De bomen in Urban Tree Pits wortelen in gebieden met een hoge
+                  grondwaterstand daardoor dieper dan het omliggende grondwater.
                 </p>
                 <div className="border-t border-gray-200 pt-8">
                   <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-900 mb-5">Specificaties</h3>
