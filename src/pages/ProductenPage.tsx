@@ -57,7 +57,11 @@ De levensduur van de beplanting is vergelijkbaar met de omlooptijd van de boom i
     text: '5 vaste plantenmengsels:',
     sub: ['Felle kleuren', 'Oranjepaars', 'Paarsblauw', 'Roze', 'Witgeel']
   }, 'Bloeiperiode april t/m oktober, afhankelijk van mengsel', 'Maatwerk plantenmengsel(s) mogelijk'];
-  const bollenText = `De beplanting in de Urban Tree Pits is ook te combineren met bloembollen, wat ervoor zorgt dat je bijna jaarrond bloeiende planten hebt. In de winter gaan de eerste soorten al bloeien, wat doorloopt tot ver in het voorjaar. Eén soort bloeit zelfs volledig in de zomer. De bloembollen en vaste planten wisselen elkaar op een natuurlijke manier af.
+  const bollenText = `De beplanting in de Urban Tree Pits is ook te combineren met bloembollen. Dit zorgt ervoor dat je bijna jaarrond bloeiende planten hebt. De bloembollen en vaste planten wisselen elkaar op een natuurlijke manier af.
+
+In de winter gaan de eerste soorten al bloeien, wat doorloopt tot ver in het voorjaar.
+
+Eén soort bloeit zelfs volledig in de zomer.
 
 De natuurlijke verspreiding zorgt ervoor dat de bollen zich in de kweekperiode gaan vermeerderen. Bij het verplanten van de boom worden alle bollen meegenomen, wat op de nieuwe locatie ook voor een biodiversiteitstoevoeging zorgt.`;
   const bollenSpecs: SpecItem[] = ['Vast bloembollenmengsel met 12 soorten', 'Bloeiperiode januari t/m juli', 'Maatwerk bloembollenmengsel(s) mogelijk'];
