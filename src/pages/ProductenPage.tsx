@@ -60,7 +60,6 @@ De levensduur van de beplanting is vergelijkbaar met de omlooptijd van de boom i
   const bollenText = `De beplanting in de Urban Tree Pits is ook te combineren met bloembollen. Dit zorgt ervoor dat je bijna jaarrond bloeiende planten hebt. De bloembollen en vaste planten wisselen elkaar op een natuurlijke manier af.
 
 In de winter gaan de eerste soorten al bloeien, wat doorloopt tot ver in het voorjaar.
-
 Eén soort bloeit zelfs volledig in de zomer.
 
 De natuurlijke verspreiding zorgt ervoor dat de bollen zich in de kweekperiode gaan vermeerderen. Bij het verplanten van de boom worden alle bollen meegenomen, wat op de nieuwe locatie ook voor een biodiversiteitstoevoeging zorgt.`;
