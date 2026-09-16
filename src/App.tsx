@@ -15,6 +15,8 @@ import PlatformPage from "./pages/PlatformPage";
 import ZoWerktHetPage from "./pages/ZoWerktHetPage";
 import ProductenPage from "./pages/ProductenPage";
 import ProjectenPage from "./pages/ProjectenPage";
+import BlogPage from "./pages/BlogPage";
+import BlogPostPage from "./pages/BlogPostPage";
 import AlgemeneVoorwaardenPage from "./pages/AlgemeneVoorwaardenPage";
 import PrivacyverklaringPage from "./pages/PrivacyverklaringPage";
 import CookiebeleidPage from "./pages/CookiebeleidPage";
@@ -39,6 +41,8 @@ const App = () => (
             <Route path="/zo-werkt-het" element={<ZoWerktHetPage />} />
             <Route path="/producten" element={<ProductenPage />} />
             <Route path="/projecten" element={<ProjectenPage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/:slug" element={<BlogPostPage />} />
             <Route path="/algemene-voorwaarden" element={<AlgemeneVoorwaardenPage />} />
             <Route path="/privacyverklaring" element={<PrivacyverklaringPage />} />
             <Route path="/cookiebeleid" element={<CookiebeleidPage />} />

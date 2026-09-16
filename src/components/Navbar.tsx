@@ -28,6 +28,9 @@ const navItems: NavItem[] = [{
   label: 'Projecten',
   path: '/projecten'
 }, {
+  label: 'Blog',
+  path: '/blog'
+}, {
   label: 'Over ons',
   path: '/over-ons',
   subItems: [{

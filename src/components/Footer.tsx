@@ -108,6 +108,9 @@ const Footer: React.FC = () => {
               label: 'Projecten',
               path: '/projecten'
             }, {
+              label: 'Blog',
+              path: '/blog'
+            }, {
               label: 'Over ons',
               path: '/over-ons'
             }].map(link => <li key={link.path}>
