@@ -48,6 +48,10 @@ const BlogPostPage: React.FC = () => {
   const related = getRelatedPosts(post, 3);
   const canonical = `${BASE_URL}/blog/${post.slug}`;
   const description = post.seoDescription || post.excerpt;
+  // A named person is marked up as Person; the house byline stays Organization.
+  const authorLd = post.author.toLowerCase().includes('nursitree')
+    ? { '@type': 'Organization', name: post.author, url: `${BASE_URL}/` }
+    : { '@type': 'Person', name: post.author };
 
   const articleJsonLd = {
     '@context': 'https://schema.org',
@@ -57,7 +61,7 @@ const BlogPostPage: React.FC = () => {
     datePublished: post.publishedAt,
     dateModified: post.updatedAt || post.publishedAt,
     ...(post.featuredImage ? { image: post.featuredImage } : {}),
-    author: { '@type': 'Organization', name: post.author, url: `${BASE_URL}/` },
+    author: authorLd,
     publisher: {
       '@type': 'Organization',
       name: 'NursiTree',
@@ -102,7 +106,7 @@ const BlogPostPage: React.FC = () => {
           <span className="text-sm font-semibold uppercase tracking-[0.15em] text-[#E8854A]">
             {post.category}
           </span>
-          <h1 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-gray-900 sm:text-4xl lg:text-[2.75rem]">
+          <h1 className="mt-4 text-4xl font-bold leading-tight tracking-tight text-gray-900 sm:text-5xl lg:text-[3.25rem]">
             {post.title}
           </h1>
 

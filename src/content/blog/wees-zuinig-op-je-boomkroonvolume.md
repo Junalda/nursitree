@@ -3,7 +3,7 @@ title: "Wees zuinig op je boomkroonvolume, het is geld waard"
 slug: wees-zuinig-op-je-boomkroonvolume
 excerpt: "Een boom in de stad levert pas echt veel op naarmate hij ouder wordt. Toch worden de meeste stadsbomen gekapt als 'puberboom', ver voordat ze hun grootste waarde bereiken. Hoe voorkom je die kapitaalvernietiging?"
 publishedAt: 2026-09-16
-author: NursiTree
+author: Gerbrand van de Weerd
 category: Boomwaarde
 featuredImage: https://d64gsuwffb70l.cloudfront.net/682e0896b7c1872af32988f8_1777961688315_d7b9019d.jpg
 featuredImageAlt: "Jonge haagbeuk in een NursiTree Urban Tree Pit langs een sportveld in Rotterdam"

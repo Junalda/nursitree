@@ -93,10 +93,10 @@ const BlogPage: React.FC = () => {
                 <article className="group mb-12">
                   <Link
                     to={`/blog/${featured.slug}`}
-                    className="grid overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#6BA539]/20 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6BA539]/50 lg:grid-cols-2"
+                    className="grid overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#6BA539]/20 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6BA539]/50 lg:grid-cols-5"
                     aria-label={featured.title}
                   >
-                    <div className="relative aspect-[16/10] overflow-hidden bg-gray-50 lg:aspect-auto lg:h-full lg:min-h-[320px]">
+                    <div className="relative aspect-[16/10] overflow-hidden bg-gray-50 lg:col-span-2 lg:aspect-auto lg:h-full lg:min-h-[300px]">
                       {featured.featuredImage ? (
                         <img
                           src={featured.featuredImage}
@@ -113,7 +113,7 @@ const BlogPage: React.FC = () => {
                         {featured.category}
                       </span>
                     </div>
-                    <div className="flex flex-col justify-center p-7 sm:p-10">
+                    <div className="flex flex-col justify-center p-7 sm:p-10 lg:col-span-3">
                       <div className="mb-3 flex items-center gap-4 text-xs text-gray-400">
                         <span className="inline-flex items-center gap-1.5">
                           <Calendar className="h-3.5 w-3.5" aria-hidden="true" />

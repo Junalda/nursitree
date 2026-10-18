@@ -32,7 +32,7 @@ function useScrollReveal() {
 const services = [{
   image: 'https://d64gsuwffb70l.cloudfront.net/682e0896b7c1872af32988f8_1778226586728_ae9224ba.jpeg',
   title: 'Advies & engineering',
-  desc: 'Voor een optimaal resultaat zitten we het liefst zo vroeg mogelijk bij jullie aan tafel. Maar we gaan niet óp jullie stoel zitten. Het is jullie project, waarin jullie engineers de leiding hebben. Wij nemen wel graag een adviserende rol op onze expertise. En om het werk voor jullie zo eenvoudig mogelijk te maken, hebben we een handige toolkit gemaakt met standaardtekeningen, beschrijvingen en installatieprincipes. Ook denken we graag mee bij de inpassing van onze groeiplaats in het maaiveld.'
+  desc: 'Voor een optimaal resultaat zitten we het liefst zo vroeg mogelijk bij jullie aan tafel. Maar we gaan niet óp jullie stoel zitten. Het is jullie project, waarin jullie engineers de leiding hebben. Wij nemen wel graag een adviserende rol op onze expertise. Om het werk voor jullie zo eenvoudig mogelijk te maken, hebben we een handige toolkit gemaakt met standaardtekeningen, beschrijvingen en installatieprincipes. Ook denken we graag mee bij de inpassing van onze groeiplaats in het maaiveld.'
 }, {
   image: 'https://d64gsuwffb70l.cloudfront.net/682e0896b7c1872af32988f8_1778226584278_74ee47e5.jpg',
   title: 'Installatie',
@@ -40,16 +40,16 @@ const services = [{
 }, {
   image: 'https://d64gsuwffb70l.cloudfront.net/682e0896b7c1872af32988f8_1778226588093_47de3a6c.jpg',
   title: 'Aanplant & nazorg',
-  desc: 'Na de aanplanting kunnen we tijdens de kweekperiode ook de begeleidingssnoei verzorgen. Als jullie hiervoor zelf de faciliteiten en teams in huis hebben, dan delen we natuurlijk alle kennis en instructies die nodig zijn om de boom binnen ons systeem zo goed mogelijk te laten groeien. We werken natuurlijk met levend materiaal waarbij je niet alles exact kunt voorspellen. Maar we zorgen altijd voor een goede overdracht, waarbij we alle randvoorwaarden voor een succesvolle verplanting hebben geoptimaliseerd.'
+  desc: 'Na de aanplanting kunnen we tijdens de kweekperiode ook de begeleidingssnoei verzorgen. Als jullie hiervoor zelf de faciliteiten en teams in huis hebben, delen we natuurlijk alle kennis en instructies die nodig zijn om de boom binnen ons systeem zo goed mogelijk te laten groeien. Omdat we met levend materiaal werken, is niet alles te voorspellen. Daarom zorgen we altijd voor een goede overdracht, waarbij we alle randvoorwaarden voor een succesvolle verplanting hebben geoptimaliseerd.'
 }, {
   image: 'https://d64gsuwffb70l.cloudfront.net/682e0896b7c1872af32988f8_1778348822605_69d4f9cf.PNG',
   title: 'Platform & Monitoring',
-  desc: 'Als de boom is aangeplant, registreren we deze op ons eigen digitale platform. Daar leggen we alle belangrijke gegevens per boom vast en houden we alle bomen die we aanplanten goed in de gaten. Als eigenaar krijg je van ons ruim op tijd een seintje wanneer het tijd wordt om de boom te verplanten, zodat we samen een geschikte plek kunnen vinden.'
+  desc: 'Als de boom is aangeplant, registreren we deze op ons eigen digitale platform. Daar leggen we alle belangrijke gegevens per boom vast en houden we alle bomen die we aanplanten goed in de gaten. Als eigenaar krijg je ruim op tijd een seintje van ons dat de boom klaar is om te verplanten, zodat we samen een geschikte plek kunnen vinden.'
 }, {
 
   image: 'https://d64gsuwffb70l.cloudfront.net/682e0896b7c1872af32988f8_1778226588878_9fbf1d93.jpg',
   title: 'Verplaatsen en verplanten',
-  desc: 'De verplantvoorbereiding start bij aanplant van de boom. Doordat de boom in de bak zit, ontwikkelt hij een kluit die in zijn geheel te transporteren is. Hierdoor vindt geen wortelschade plaats en kan de boom op de nieuwe standplaats gelijk nieuwe wortels ontwikkelen. Met een speciaal ontwikkeld hijsframe, kunnen we het verplaatsen en verplanten van een boom eenvoudig uitvoeren wanneer dat nodig is.'
+  desc: 'De verplantvoorbereiding start al bij de aanplant van de boom. Doordat de boom in de bak zit, ontwikkelt hij een kluit die in zijn geheel te transporteren is. Hierdoor vindt geen wortelschade plaats en kan de boom op de nieuwe standplaats gelijk nieuwe wortels ontwikkelen. Met een speciaal ontwikkeld hijsframe maken we het verplaatsen en verplanten van een boom eenvoudig wanneer dat nodig is.'
 }];
 
 
@@ -128,7 +128,7 @@ const DienstenPage: React.FC = () => {
 
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] font-bold text-gray-900 leading-[1.08] tracking-tight mb-5 sm:mb-8 text-left">
                   Wij vinden altijd ruimte voor{' '}
-                  <span className="text-[#6BAF3A]">meer groen</span>
+                  <span className="text-[#6BAF3A] whitespace-nowrap">meer groen</span>
                 </h1>
 
                 <p className="text-base sm:text-lg md:text-xl text-gray-500 leading-relaxed mb-8 sm:mb-12 max-w-lg text-left">
@@ -165,7 +165,7 @@ const DienstenPage: React.FC = () => {
                 Dit is wat we doen
               </h2>
               <p className="text-lg text-gray-500 leading-relaxed text-left">
-                Wij zijn dé leverancier van slimme groeiplaatsen voor bomen in de stad. In aanvulling daarop bieden we een aantal ondersteuningsdiensten aan. Welke jullie hiervan precies afnemen, hangt af van de huidige situatie en beschikbare voorzieningen. Dit is dus altijd maatwerk.
+                Wij zijn dé leverancier van slimme groeiplaatsen voor bomen in de stad. In aanvulling daarop bieden we een aantal ondersteuningsdiensten aan. Welke jullie hiervan precies nodig hebben, hangt af van de huidige situatie en beschikbare voorzieningen. Dit is dus altijd maatwerk.
               </p>
             </div>
 
@@ -266,7 +266,7 @@ const DienstenPage: React.FC = () => {
                   </p>
 
                   <p className="text-lg text-white/85 leading-relaxed">
-                    En wat dacht je van alle kabels die we nodig hebben voor snel internet, tv en de energietransitie? Maar de maatschappij vraagt ook om een antwoord op klimaatverandering. Voor een gezonde en veilige toekomst, zijn er bomen nodig met veel boomkroonvolume.
+                    En wat dacht je van alle kabels die we nodig hebben voor snel internet, tv en de energietransitie? Maar de maatschappij vraagt ook om een antwoord op klimaatverandering. Voor een gezonde en veilige toekomst zijn er bomen nodig met veel boomkroonvolume.
                   </p>
 
                   <p className="text-lg text-white/85 leading-relaxed">
@@ -316,7 +316,7 @@ const DienstenPage: React.FC = () => {
 
             <div className="space-y-6 text-left animate-on-scroll animate-on-scroll-delay-1">
               <p className="text-lg text-gray-500 leading-relaxed">
-                Wij beschouwen de stad als kwekerij. Dat betekent dat elke locatie wat anders nodig heeft en mogelijk zelfs vraagt om flexibiliteit. Op plekken met weinig onder- en bovengrondse ruimte is onze Urban Tree Pit dé oplossing. De standaard componenten zijn eenvoudig te installeren en de basis voor gezonde groei.
+                Wij beschouwen de stad als kwekerij. Dat betekent dat elke locatie wat anders nodig heeft en mogelijk vraagt om flexibiliteit. Op plekken met weinig onder- en bovengrondse ruimte is onze Urban Tree Pit dé oplossing. De standaard componenten zijn eenvoudig te installeren en de basis voor gezonde groei.
               </p>
 
               <p className="text-lg text-gray-500 leading-relaxed">
@@ -376,7 +376,7 @@ const DienstenPage: React.FC = () => {
                   <li className="flex items-start gap-3">
                     <span className="mt-2 w-1.5 h-1.5 rounded-full bg-white/60 flex-shrink-0" />
                     <span className="text-base text-white/85 leading-relaxed">
-                      Bomen worden aangeplant op een manier die in de toekomst geen problemen veroorzaakt. Zoals wortels die de straat opdrukken.
+                      Bomen worden aangeplant op een manier die in de toekomst geen problemen veroorzaakt
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
@@ -610,7 +610,7 @@ const DienstenPage: React.FC = () => {
             </h2>
 
             <div className="space-y-6 text-left animate-on-scroll animate-on-scroll-delay-1">
-              <p className="text-lg text-gray-500 leading-relaxed">Onze oplossing voor vergroening in de stad vraagt om een iets hogere investering bij aanvang dan je bijvoorbeeld voor het plaatsen van een jonge boom in de open grond moet doen. Of voor andere maatwerkoplossingen. Maar de opbrengsten zijn vele malen hoger, wat de investering op de lange termijn een stuk interessanter maakt.</p>
+              <p className="text-lg text-gray-500 leading-relaxed">Onze oplossing voor vergroening in de stad vraagt om een iets hogere investering bij aanvang dan je bijvoorbeeld voor het plaatsen van een jonge boom in de open grond moet doen. Maar de opbrengsten zijn vele malen hoger, wat de investering op de lange termijn een stuk interessanter maakt.</p>
 
               <p className="text-lg text-gray-500 leading-relaxed">
                 Veel gemeenten en projectontwikkelaars investeren in bomen met het idee dat die tachtig jaar lang resultaat opbrengen. Maar in de praktijk worden deze door veranderende omstandigheden veel eerder gekapt.
@@ -628,7 +628,7 @@ const DienstenPage: React.FC = () => {
 
               <div className="space-y-6 text-left">
                 <p className="text-lg text-gray-500 leading-relaxed">
-                  We vragen ook welke uitgaven jullie nu doen voor vergroening en wat daarbij komt als je echt gaat voor een slimme kwekerij in de stad?
+                  Wij denken met je mee. Welke uitgaven doen jullie nu voor vergroening? En wat komt daarbij als je echt gaat voor een slimme kwekerij in de stad?
                 </p>
 
                 <p className="text-lg text-gray-500 leading-relaxed">
@@ -636,7 +636,7 @@ const DienstenPage: React.FC = () => {
                 </p>
 
                 <p className="text-lg text-gray-500 leading-relaxed">
-                  Als we vooraan in het proces aan tafel komen, is er altijd meer mogelijk dan je denkt.
+                  Als we vroeg in het proces aan tafel komen, is er altijd meer mogelijk dan je denkt.
                 </p>
               </div>
             </div>
