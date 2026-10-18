@@ -439,33 +439,33 @@ const DienstenPage: React.FC = () => {
                 </ul>
               </div>
 
-              {/* TILE 3 — Neutral/Cream (matching homepage section 5 tile 3) */}
-              <div className="animate-on-scroll animate-on-scroll-delay-2 rounded-2xl p-8 sm:p-10 border border-gray-200 transition-all duration-300 cursor-default hover:-translate-y-1.5 hover:shadow-2xl hover:scale-[1.02]" style={{
-              backgroundColor: '#f5f5f0'
+              {/* TILE 3 — Green (groen–oranje–groen: matches tile 1) */}
+              <div className="animate-on-scroll animate-on-scroll-delay-2 rounded-2xl p-8 sm:p-10 transition-all duration-300 cursor-default hover:-translate-y-1.5 hover:shadow-2xl hover:scale-[1.02]" style={{
+              backgroundColor: '#4E8A25'
             }}>
-                <h3 className="text-xl font-bold text-gray-900 mb-6 text-left">Circulair concept</h3>
+                <h3 className="text-xl font-bold text-white mb-6 text-left">Circulair concept</h3>
                 <ul className="space-y-4 text-left">
                   <li className="flex items-start gap-3">
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#4E8A25] flex-shrink-0" />
-                    <span className="text-base text-gray-500 leading-relaxed">
+                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-white/60 flex-shrink-0" />
+                    <span className="text-base text-white/85 leading-relaxed">
                       Elke boom in een Urban Tree Pit plaatsen we op ons online platform
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#4E8A25] flex-shrink-0" />
-                    <span className="text-base text-gray-500 leading-relaxed">
+                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-white/60 flex-shrink-0" />
+                    <span className="text-base text-white/85 leading-relaxed">
                       De beheerder ontvangt ruim op tijd een seintje om een nieuwe groeiplaats te zoeken
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#4E8A25] flex-shrink-0" />
-                    <span className="text-base text-gray-500 leading-relaxed">
+                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-white/60 flex-shrink-0" />
+                    <span className="text-base text-white/85 leading-relaxed">
                       Hulp bij de zoektocht, voor de beste match en volledige potentie
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#4E8A25] flex-shrink-0" />
-                    <span className="text-base text-gray-500 leading-relaxed">
+                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-white/60 flex-shrink-0" />
+                    <span className="text-base text-white/85 leading-relaxed">
                       Maximale ontwikkeling van het boomkroonvolume
                     </span>
                   </li>

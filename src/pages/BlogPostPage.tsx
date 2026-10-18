@@ -91,9 +91,9 @@ const BlogPostPage: React.FC = () => {
       />
 
       <article className="bg-white">
-        {/* Header */}
-        <header className="mx-auto max-w-3xl px-4 pt-10 sm:px-6 sm:pt-14 lg:px-8">
-          <nav aria-label="Kruimelpad" className="mb-8">
+        {/* Header + hero */}
+        <header className="mx-auto max-w-4xl px-4 pt-10 sm:px-6 sm:pt-14 lg:px-8">
+          <nav aria-label="Kruimelpad" className="mb-6">
             <Link
               to="/blog"
               className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-500 transition-colors hover:text-[#6BA539]"
@@ -103,12 +103,38 @@ const BlogPostPage: React.FC = () => {
             </Link>
           </nav>
 
-          <span className="text-sm font-semibold uppercase tracking-[0.15em] text-[#E8854A]">
-            {post.category}
-          </span>
-          <h1 className="mt-4 text-4xl font-bold leading-tight tracking-tight text-gray-900 sm:text-5xl lg:text-[3.25rem]">
-            {post.title}
-          </h1>
+          {post.featuredImage ? (
+            /* Category + title overlaid top-left on the featured image. */
+            <div className="relative overflow-hidden rounded-2xl shadow-md">
+              <img
+                src={post.featuredImage}
+                alt={post.featuredImageAlt || post.title}
+                decoding="async"
+                className="aspect-[16/10] w-full object-cover sm:aspect-[16/9]"
+              />
+              <div
+                className="absolute inset-0 bg-gradient-to-br from-black/75 via-black/40 to-transparent"
+                aria-hidden="true"
+              />
+              <div className="absolute inset-0 flex flex-col items-start p-6 sm:p-9 lg:p-11">
+                <span className="inline-flex items-center rounded-full bg-[#E8854A] px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white shadow-sm">
+                  {post.category}
+                </span>
+                <h1 className="mt-4 max-w-3xl text-3xl font-bold leading-tight tracking-tight text-white drop-shadow-md sm:text-4xl lg:text-5xl">
+                  {post.title}
+                </h1>
+              </div>
+            </div>
+          ) : (
+            <>
+              <span className="text-sm font-semibold uppercase tracking-[0.15em] text-[#E8854A]">
+                {post.category}
+              </span>
+              <h1 className="mt-4 text-4xl font-bold leading-tight tracking-tight text-gray-900 sm:text-5xl lg:text-[3.25rem]">
+                {post.title}
+              </h1>
+            </>
+          )}
 
           <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-400">
             <span className="inline-flex items-center gap-1.5">
@@ -131,18 +157,6 @@ const BlogPostPage: React.FC = () => {
             </span>
           </div>
         </header>
-
-        {/* Featured image */}
-        {post.featuredImage && (
-          <figure className="mx-auto mt-10 max-w-4xl px-4 sm:px-6 lg:px-8">
-            <img
-              src={post.featuredImage}
-              alt={post.featuredImageAlt || post.title}
-              decoding="async"
-              className="aspect-[16/9] w-full rounded-2xl object-cover shadow-md"
-            />
-          </figure>
-        )}
 
         {/* Body */}
         <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
