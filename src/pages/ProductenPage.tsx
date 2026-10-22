@@ -464,19 +464,28 @@ De natuurlijke verspreiding zorgt ervoor dat de bollen zich in de kweekperiode g
         />
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 text-center">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight tracking-tight">
-            Download de productbrochure
+            Download de besteksposten
           </h2>
           <p className="text-lg text-white/85 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Alle specificaties, add-ons en toepassingen van BRENT overzichtelijk in één document.
+            De RAW-besteksposten voor het leveren en aanbrengen van de Urban Tree Pit — klaar om in
+            je bestek op te nemen. Beschikbaar als PDF en als RAW-bestand (RSX).
           </p>
-          <div className="flex items-center justify-center">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
             <a
-              href="/brent-productbrochure.pdf"
+              href="/downloads/besteksposten-nursitree-urban-tree-pit.pdf"
               download
-              className="px-8 py-4 rounded-xl text-base font-semibold transition-all duration-200 shadow-lg hover:shadow-xl flex items-center gap-2 bg-white text-[#6BA539] hover:bg-gray-50"
+              className="px-8 py-4 rounded-xl text-base font-semibold transition-all duration-200 shadow-lg hover:shadow-xl flex items-center gap-2 bg-white text-[#6BA539] hover:bg-gray-50 w-full sm:w-auto justify-center"
             >
               <Download className="w-5 h-5" />
-              Download brochure
+              Besteksposten (PDF)
+            </a>
+            <a
+              href="/downloads/besteksposten-nursitree-urban-tree-pit.rsx"
+              download
+              className="px-8 py-4 rounded-xl text-base font-semibold transition-all duration-200 shadow-lg hover:shadow-xl flex items-center gap-2 bg-white/15 text-white border border-white/40 hover:bg-white/25 w-full sm:w-auto justify-center"
+            >
+              <Download className="w-5 h-5" />
+              RAW-bestek (RSX)
             </a>
           </div>
         </div>
