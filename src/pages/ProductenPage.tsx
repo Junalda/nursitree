@@ -454,13 +454,7 @@ De natuurlijke verspreiding zorgt ervoor dat de bollen zich in de kweekperiode g
         {/* Green base */}
         <div
           className="absolute inset-0"
-          style={{ background: 'linear-gradient(135deg, #4E8A25 0%, #6BA539 100%)' }}
-          aria-hidden="true"
-        />
-        {/* Subtle depth overlay */}
-        <div
-          className="absolute inset-0"
-          style={{ background: 'linear-gradient(255deg, rgba(0,0,0,0.06) 0%, transparent 45%, rgba(255,255,255,0.08) 100%)' }}
+          style={{ background: '#6BA539' }}
           aria-hidden="true"
         />
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 text-center">
@@ -468,7 +462,7 @@ De natuurlijke verspreiding zorgt ervoor dat de bollen zich in de kweekperiode g
             Download de besteksposten
           </h2>
           <p className="text-lg text-white/85 mb-8 max-w-2xl mx-auto leading-relaxed">
-            De RAW-besteksposten voor het leveren en aanbrengen van de Urban Tree Pit — klaar om in
+            De RAW-besteksposten voor het leveren en aanbrengen van de Urban Tree Pit, klaar om in
             je bestek op te nemen. Laat je naam en e-mailadres achter, dan sturen we je de PDF én het
             RAW-bestand (RSX).
           </p>
@@ -481,7 +475,7 @@ De natuurlijke verspreiding zorgt ervoor dat de bollen zich in de kweekperiode g
       paddingTop: '3rem',
       paddingBottom: '10rem',
       marginBottom: '-2px',
-      background: 'linear-gradient(135deg, #4E8A25 0%, #6BA539 100%)'
+      background: '#6BA539'
     }}>
         <div
           className="absolute left-0 right-0 bottom-0 h-10 bg-[#182418]"
