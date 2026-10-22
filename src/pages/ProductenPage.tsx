@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Info, Download } from 'lucide-react';
+import { ArrowRight, Info } from 'lucide-react';
 import PageLayout from '@/components/PageLayout';
 import SEO from '@/components/SEO';
+import BesteksDownloadForm from '@/components/BesteksDownloadForm';
 
 /* ==================================================================
  * FULLY INDEPENDENT IMAGE ARCHITECTURE
@@ -466,28 +467,12 @@ De natuurlijke verspreiding zorgt ervoor dat de bollen zich in de kweekperiode g
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight tracking-tight">
             Download de besteksposten
           </h2>
-          <p className="text-lg text-white/85 mb-10 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-white/85 mb-8 max-w-2xl mx-auto leading-relaxed">
             De RAW-besteksposten voor het leveren en aanbrengen van de Urban Tree Pit — klaar om in
-            je bestek op te nemen. Beschikbaar als PDF en als RAW-bestand (RSX).
+            je bestek op te nemen. Laat je naam en e-mailadres achter, dan sturen we je de PDF én het
+            RAW-bestand (RSX).
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-            <a
-              href="/downloads/besteksposten-nursitree-urban-tree-pit.pdf"
-              download
-              className="px-8 py-4 rounded-xl text-base font-semibold transition-all duration-200 shadow-lg hover:shadow-xl flex items-center gap-2 bg-white text-[#6BA539] hover:bg-gray-50 w-full sm:w-auto justify-center"
-            >
-              <Download className="w-5 h-5" />
-              Besteksposten (PDF)
-            </a>
-            <a
-              href="/downloads/besteksposten-nursitree-urban-tree-pit.rsx"
-              download
-              className="px-8 py-4 rounded-xl text-base font-semibold transition-all duration-200 shadow-lg hover:shadow-xl flex items-center gap-2 bg-white/15 text-white border border-white/40 hover:bg-white/25 w-full sm:w-auto justify-center"
-            >
-              <Download className="w-5 h-5" />
-              RAW-bestek (RSX)
-            </a>
-          </div>
+          <BesteksDownloadForm />
         </div>
       </section>
 

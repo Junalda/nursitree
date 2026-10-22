@@ -18,50 +18,54 @@ function vercelApiDevPlugin(env: Record<string, string>): Plugin {
         if (process.env[key] === undefined) process.env[key] = value;
       }
 
-      server.middlewares.use("/api/contact", async (req, res) => {
-        const sendJson = (code: number, payload: unknown) => {
-          res.statusCode = code;
-          res.setHeader("Content-Type", "application/json");
-          res.end(JSON.stringify(payload));
-        };
+      const mountApi = (route: string, modulePath: string) => {
+        server.middlewares.use(route, async (req, res) => {
+          const sendJson = (code: number, payload: unknown) => {
+            res.statusCode = code;
+            res.setHeader("Content-Type", "application/json");
+            res.end(JSON.stringify(payload));
+          };
 
-        // Minimal Express-like response shim matching the handler's usage.
-        const resShim = {
-          _code: 200,
-          status(code: number) {
-            this._code = code;
-            return this;
-          },
-          json(payload: unknown) {
-            sendJson(this._code, payload);
-            return this;
-          },
-          setHeader: (k: string, v: string) => res.setHeader(k, v),
-        };
+          // Minimal Express-like response shim matching the handler's usage.
+          const resShim = {
+            _code: 200,
+            status(code: number) {
+              this._code = code;
+              return this;
+            },
+            json(payload: unknown) {
+              sendJson(this._code, payload);
+              return this;
+            },
+            setHeader: (k: string, v: string) => res.setHeader(k, v),
+          };
 
-        let raw = "";
-        for await (const chunk of req) raw += chunk;
-        let body: unknown = {};
-        try {
-          body = raw ? JSON.parse(raw) : {};
-        } catch {
-          body = {};
-        }
+          let raw = "";
+          for await (const chunk of req) raw += chunk;
+          let body: unknown = {};
+          try {
+            body = raw ? JSON.parse(raw) : {};
+          } catch {
+            body = {};
+          }
 
-        try {
-          const mod = await server.ssrLoadModule("/api/contact.js");
-          await mod.default(
-            { method: req.method, headers: req.headers, body },
-            resShim,
-          );
-        } catch (err) {
-          console.error("[vercel-api-dev] handler error:", err);
-          sendJson(500, {
-            error:
-              "Er is iets misgegaan bij het versturen van jouw bericht. Probeer het later opnieuw.",
-          });
-        }
-      });
+          try {
+            const mod = await server.ssrLoadModule(modulePath);
+            await mod.default(
+              { method: req.method, headers: req.headers, body },
+              resShim,
+            );
+          } catch (err) {
+            console.error("[vercel-api-dev] handler error:", err);
+            sendJson(500, {
+              error: "Er is iets misgegaan. Probeer het later opnieuw.",
+            });
+          }
+        });
+      };
+
+      mountApi("/api/contact", "/api/contact.js");
+      mountApi("/api/besteksposten", "/api/besteksposten.js");
     },
   };
 }
