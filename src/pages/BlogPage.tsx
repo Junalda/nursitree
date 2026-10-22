@@ -4,6 +4,7 @@ import { ArrowRight, Calendar, Clock, Leaf } from 'lucide-react';
 import PageLayout from '@/components/PageLayout';
 import SEO from '@/components/SEO';
 import BlogCard from '@/components/blog/BlogCard';
+import BesteksDownloadCta from '@/components/BesteksDownloadCta';
 import { getAllPosts, formatDate } from '@/lib/blog';
 
 const BASE_URL = 'https://www.nursitree.com';
@@ -151,6 +152,9 @@ const BlogPage: React.FC = () => {
           )}
         </div>
       </section>
+
+      {/* Download besteksposten (links to the form on the Producten page) */}
+      <BesteksDownloadCta className="pb-16 sm:pb-20 lg:pb-24" />
     </PageLayout>
   );
 };

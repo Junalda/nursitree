@@ -450,7 +450,7 @@ De natuurlijke verspreiding zorgt ervoor dat de bollen zich in de kweekperiode g
       </section>
 
       {/* DOWNLOAD — green segment above the CTA */}
-      <section className="relative z-[2] overflow-hidden" style={{ marginBottom: '-1px' }}>
+      <section id="besteksposten" className="relative z-[2] overflow-hidden scroll-mt-24" style={{ marginBottom: '-1px' }}>
         {/* Green base */}
         <div
           className="absolute inset-0"

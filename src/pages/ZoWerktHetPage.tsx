@@ -12,6 +12,7 @@ import ZwhFaq from '@/components/zowerkthet/ZwhFaq';
 import { faqs } from '@/components/zowerkthet/faqData';
 import ZwhFinalCta from '@/components/zowerkthet/ZwhFinalCta';
 import ZwhGreenCta from '@/components/zowerkthet/ZwhGreenCta';
+import BesteksDownloadCta from '@/components/BesteksDownloadCta';
 
 const ZoWerktHetPage: React.FC = () => {
   return (
@@ -56,6 +57,9 @@ const ZoWerktHetPage: React.FC = () => {
 
       {/* 3. Product Intro – "Dit is BRENT" */}
       <ZwhProduct />
+
+      {/* Download besteksposten (links to the form on the Producten page) */}
+      <BesteksDownloadCta className="py-14 sm:py-16" />
 
       {/* 4. How It Works (Core Tech) */}
       <ZwhHowItWorks />
