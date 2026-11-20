@@ -179,7 +179,7 @@ const OverOnsPage: React.FC = () => {
                   <span className="text-[#E8854A]">groei</span>
                 </h1>
 
-                <p className="text-base sm:text-lg md:text-xl text-gray-500 leading-relaxed mb-8 sm:mb-12 max-w-lg text-left">Wij willen graag bijdragen aan een gezond en leefbaar (stads)klimaat. Want de uitdagingen voor drukke steden worden alleen maar groter. Maar we zijn ervan overtuigd dat we door goed samen te werken, voor iedereen een duurzame toekomst kunnen creëren. </p>
+                <p className="text-base sm:text-lg md:text-xl text-gray-500 leading-relaxed mb-8 sm:mb-12 max-w-lg text-left">Wij willen graag bijdragen aan een gezond en leefbaar (stads)klimaat. Want de uitdagingen voor drukke steden worden alleen maar groter. Maar we zijn ervan overtuigd dat we, door goed samen te werken, voor iedereen een duurzame toekomst kunnen creëren. </p>
 
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                   <a href="#wie-zijn-wij" onClick={e => {
