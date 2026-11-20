@@ -57,7 +57,7 @@ const PlatformSocialProof: React.FC = () => {
         {/* Testimonial cards */}
 
         <div className="grid md:grid-cols-3 gap-8">
-          {testimonials.map(t => <div key={t.name} className="group bg-white rounded-2xl p-8 border border-gray-100 hover:border-transparent hover:shadow-xl transition-all duration-500 relative overflow-hidden w-full landscape:max-md:max-w-[420px] landscape:max-md:mx-auto">
+          {testimonials.map(t => <div key={t.name} className="group bg-white rounded-2xl p-8 border border-gray-100 shadow-xl hover:shadow-2xl transition-all duration-500 relative overflow-hidden w-full landscape:max-md:max-w-[420px] landscape:max-md:mx-auto">
 
               {/* Top accent line */}
               <div className="absolute top-0 left-0 right-0 h-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{
