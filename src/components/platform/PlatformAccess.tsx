@@ -73,7 +73,7 @@ Misschien spot je er wel eentje bij jou in de buurt. Kan je meteen even langsrij
 
                 {/* Subtle CTA badge */}
                 <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6">
-                  <div className="flex items-center gap-2 bg-white/95 backdrop-blur-md text-[#0a1a0a] px-4 py-2.5 rounded-full text-sm font-semibold shadow-lg transition-all duration-300 group-hover:bg-[#6BA539] group-hover:text-white group-hover:pr-5">
+                  <div className="flex items-center gap-2 bg-[#E8854A] text-white px-6 py-3.5 rounded-xl text-sm font-semibold shadow-lg transition-all duration-200 group-hover:bg-[#D27337] group-hover:shadow-xl">
                     <ExternalLink className="w-4 h-4" />
                     <span>Bekijk live platform</span>
                     <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
