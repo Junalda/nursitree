@@ -169,7 +169,7 @@ const VisiePage: React.FC = () => {
                 </h1>
 
                 <p className="text-base sm:text-lg md:text-xl text-gray-500 leading-relaxed mb-8 sm:mb-12 max-w-lg text-left">
-                  Wij geloven in een toekomst waarin bomen niet worden beperkt door de stedelijke omgeving, maar hier juist in floreren.
+                  Wij geloven in een toekomst waarin bomen niet worden beperkt door de stedelijke omgeving, maar hier juist optimaal tot hun recht komen.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
