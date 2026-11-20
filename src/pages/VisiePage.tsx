@@ -517,7 +517,8 @@ const VisiePage: React.FC = () => {
             </h2>
 
             <p className="text-base sm:text-lg text-white/85 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
-              Benieuwd hoe NursiTree kan bijdragen aan jouw project? We denken graag met je mee.
+              Benieuwd hoe NursiTree kan bijdragen aan jouw project?<br />
+              We denken graag met je mee.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
               <Link to="/#contact-section" className="w-full sm:w-auto px-8 py-4 rounded-xl text-base font-semibold transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 bg-white text-[#E8854A] hover:bg-gray-50">
