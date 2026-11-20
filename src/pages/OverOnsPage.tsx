@@ -56,7 +56,7 @@ const values = [{
   accent: '#E8854A'
 }, {
   title: 'Innovatief',
-  text: 'We zijn een innovatieve partner die partijen met elkaar verbindt en zoekt naar een manier waarop het wel kan.',
+  text: 'We zijn een innovatieve partner die partijen met elkaar verbindt en zoekt naar een manier waarop het wél kan.',
   accent: '#6BA539'
 }, {
   title: 'Betrokken',
@@ -64,7 +64,7 @@ const values = [{
   accent: '#E8854A'
 }, {
   title: 'Kwaliteit',
-  text: 'We willen alleen maar steengoede dingen maken, die lang meegaan. En bijdragen aan een groene toekomst.',
+  text: 'We willen alleen maar steengoede dingen maken, die lang meegaan. Zo dragen we nú bij aan een groene toekomst.',
   accent: '#6BA539'
 }];
 
