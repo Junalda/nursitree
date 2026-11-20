@@ -260,32 +260,33 @@ const OverOnsPage: React.FC = () => {
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-8 tracking-tight">
                   Wat betekent NursiTree?
                 </h2>
-                <div className="space-y-6">
+                <div className="space-y-8">
                   <p className="text-lg text-white/85 leading-relaxed">
                     NursiTree is een samenvoeging van de woorden Nursery, City & Tree.{' '}
                     <br className="hidden sm:block" />
                     Want dat is wat we doen: we maken van de stad een boomkwekerij.
                   </p>
+
+                  {/* 3 blocks between the two paragraphs */}
+                  <div className="flex flex-wrap justify-center gap-5 sm:gap-6">
+                    {[{
+                    word: 'Nursery',
+                    sub: 'Kwekerij'
+                  }, {
+                    word: 'City',
+                    sub: 'Stad'
+                  }, {
+                    word: 'Tree',
+                    sub: 'Boom'
+                  }].map(item => <div key={item.word} className="min-w-[9.5rem] sm:min-w-[11rem] px-8 py-7 sm:px-10 sm:py-8 rounded-xl bg-white/15 backdrop-blur-sm border border-white/20 text-center">
+                        <div className="text-white font-bold text-2xl sm:text-3xl uppercase tracking-wide">{item.word}</div>
+                        <div className="text-white/70 text-sm sm:text-base uppercase tracking-wider mt-2">{item.sub}</div>
+                      </div>)}
+                  </div>
+
                   <p className="text-lg text-white/85 leading-relaxed">
                     Omdat goed groeiende bomen onmisbaar zijn voor een prettig leefklimaat in bebouwd gebied. Met het NursiTree-systeem zorgen we voor goed groeiende bomen waar het eerst niet mogelijk was.
                   </p>
-                </div>
-
-                {/* 3 blocks moved from former section 3 */}
-                <div className="flex flex-wrap justify-center gap-4 mt-10">
-                  {[{
-                  word: 'Nursery',
-                  sub: 'Kwekerij'
-                }, {
-                  word: 'City',
-                  sub: 'Stad'
-                }, {
-                  word: 'Tree',
-                  sub: 'Boom'
-                }].map(item => <div key={item.word} className="px-6 py-4 rounded-xl bg-white/15 backdrop-blur-sm border border-white/20 text-center">
-                      <div className="text-white font-bold text-lg">{item.word}</div>
-                      <div className="text-white/60 text-xs mt-0.5">{item.sub}</div>
-                    </div>)}
                 </div>
 
                 <div className="mt-12">
