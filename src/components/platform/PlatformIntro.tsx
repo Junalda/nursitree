@@ -12,10 +12,12 @@ const PlatformIntro: React.FC = () => {
             </h2>
             <div className="space-y-6 sm:space-y-8">
               <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed text-left">
-                Wij hebben als NursiTree een systeem ontwikkeld, waarmee je midden in de drukke stad een gezonde boom kunt laten opgroeien. Maar na zo'n twintig jaar verplaatsen we de boom, zodat hij ergens anders nóg verder kan groeien. Waar moet de boom dan heen?
+                Wij hebben als NursiTree een systeem ontwikkeld, waarmee je midden in de drukke stad een gezonde boom kunt laten opgroeien. Na zo'n twintig jaar verplaatsen we de boom, zodat hij ergens anders nóg verder kan groeien.
+                <br />
+                Waar moet de boom dan heen?
               </p>
               <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed text-left">
-                Daarvoor hebben we een slim platform gebouwd, zodat er voor de door jou zorgvuldig opgekweekte boom altijd een goede nieuwe plek beschikbaar is en die op het platform terug te vinden is.
+                We hebben een slim platform gebouwd met daarop de status van elke boom. Zo is altijd te zien wanneer deze vrijkomen, zodat de door jou zorgvuldig opgekweekte boom altijd tijdig een nieuwe plaats vindt.
               </p>
             </div>
           </div>
