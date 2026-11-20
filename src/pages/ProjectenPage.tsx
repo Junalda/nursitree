@@ -1171,13 +1171,13 @@ const ProjectenPage: React.FC = () => {
 
 
       {/* ============================================================
-          FEATURED PROJECT — Apeldoorn (compact, above the filter)
-          Sits between the hero and the sticky filter so visitors
-          immediately see both the featured project AND the filter
-          on page load. Starts COLLAPSED — clicking "Lees meer"
-          expands the full story inline.
+          FEATURED PROJECT — Apeldoorn (above the filter)
+          Larger centered image plus the opening sentences, so the
+          highlighted story feels distinct from the grid below.
+          Starts COLLAPSED — clicking "Lees meer" expands the full
+          story inline.
        ============================================================ */}
-      <section className="bg-white pt-2 pb-6 sm:pb-8">
+      <section className="bg-white pt-2 pb-10 sm:pb-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <article
             role="button"
@@ -1190,48 +1190,51 @@ const ProjectenPage: React.FC = () => {
                 setP1Open(o => !o);
               }
             }}
-            className={`group bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-xl hover:scale-[1.01] transition-all duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#6BA539]/40 focus:ring-offset-2 ${p1Open ? 'shadow-xl' : ''}`}
+            className={`group max-w-4xl mx-auto bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#6BA539]/40 focus:ring-offset-2`}
           >
-            {/* Compact header row — always visible */}
-            <div className="flex flex-col sm:flex-row sm:items-stretch">
-              {/* Thumbnail — kept small so collapsed height stays compact */}
-              <div className="relative sm:w-56 md:w-64 lg:w-72 flex-shrink-0 aspect-[16/10] sm:aspect-auto overflow-hidden">
-                <img
-                  src="https://d64gsuwffb70l.cloudfront.net/682e0896b7c1872af32988f8_1776947293443_d8d867de.JPG"
-                  alt="Urban Tree Pits Edisonlaan Apeldoorn"
-                  className="w-full h-full object-cover"
-                />
-                <span className="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#6BA539] text-white text-[11px] font-semibold uppercase tracking-wide shadow">
-                  Uitgelicht
-                </span>
+            {/* Large centered image so the featured story reads as the special item */}
+            <div className="relative aspect-[16/9] sm:aspect-[2/1] overflow-hidden bg-gray-100">
+              <img
+                src="https://d64gsuwffb70l.cloudfront.net/682e0896b7c1872af32988f8_1776947293443_d8d867de.JPG"
+                alt="Urban Tree Pits Edisonlaan Apeldoorn"
+                className="w-full h-full object-cover object-center"
+              />
+              <span className="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#6BA539] text-white text-xs font-semibold uppercase tracking-wide shadow">
+                Uitgelicht
+              </span>
+            </div>
+
+            {/* Title + opening sentences + CTA */}
+            <div className="p-6 sm:p-8 lg:p-10">
+              <div className="flex items-center flex-wrap gap-x-3 gap-y-1 text-xs sm:text-sm text-gray-500 mb-3">
+                <span className="inline-flex items-center gap-1"><MapPin className="w-3.5 h-3.5" />Apeldoorn</span>
+                <span className="inline-flex items-center gap-1"><Calendar className="w-3.5 h-3.5" />Maart 2026</span>
               </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 leading-snug mb-4">
+                Urban Tree Pits Edisonlaan Apeldoorn
+              </h2>
 
-              {/* Title + meta + CTA */}
-              <div className="flex-1 p-5 sm:p-6 flex flex-col justify-center">
-                <div className="flex items-center flex-wrap gap-x-3 gap-y-1 text-xs text-gray-500 mb-2">
-                  <span className="inline-flex items-center gap-1"><MapPin className="w-3.5 h-3.5" />Apeldoorn</span>
-                  <span className="inline-flex items-center gap-1"><Calendar className="w-3.5 h-3.5" />Maart 2026</span>
-                </div>
-                <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 leading-snug mb-3">
-                  Urban Tree Pits Edisonlaan Apeldoorn
-                </h2>
+              {!p1Open && (
+                <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-6 max-w-3xl">
+                  De gemeente Apeldoorn is bezig om hittestress in de stad te verminderen. Daarom wordt druk gezocht naar plekken om groen toe te voegen. De twee parkeerplaatsen aan de Edisonlaan in Apeldoorn zijn in de zomer ontzettend warm.
+                </p>
+              )}
 
-                <div className="flex items-center justify-between gap-4">
-                  <div className="hidden md:flex flex-wrap gap-1.5">
-                    <span className="inline-flex items-center rounded-full bg-[#6BA539]/10 text-[#4E8A25] font-medium border border-[#6BA539]/15 whitespace-nowrap px-2.5 py-1 text-xs">Parkeerdruk</span>
-                    <span className="inline-flex items-center rounded-full bg-[#6BA539]/10 text-[#4E8A25] font-medium border border-[#6BA539]/15 whitespace-nowrap px-2.5 py-1 text-xs">Kabels en leidingen</span>
-                    <span className="inline-flex items-center rounded-full bg-[#6BA539]/10 text-[#4E8A25] font-medium border border-[#6BA539]/15 whitespace-nowrap px-2.5 py-1 text-xs">Hoog grondwater</span>
-                  </div>
-                  <button
-                    type="button"
-                    onClick={(e) => { e.stopPropagation(); setP1Open(o => !o); }}
-                    aria-expanded={p1Open}
-                    className="ml-auto inline-flex items-center gap-1.5 text-[#6BA539] text-sm font-semibold hover:gap-2.5 transition-all"
-                  >
-                    {p1Open ? 'Lees minder' : 'Lees meer'}
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${p1Open ? 'rotate-180' : ''}`} />
-                  </button>
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                <div className="flex flex-wrap gap-1.5">
+                  <span className="inline-flex items-center rounded-full bg-[#6BA539]/10 text-[#4E8A25] font-medium border border-[#6BA539]/15 whitespace-nowrap px-2.5 py-1 text-xs">Parkeerdruk</span>
+                  <span className="inline-flex items-center rounded-full bg-[#6BA539]/10 text-[#4E8A25] font-medium border border-[#6BA539]/15 whitespace-nowrap px-2.5 py-1 text-xs">Kabels en leidingen</span>
+                  <span className="inline-flex items-center rounded-full bg-[#6BA539]/10 text-[#4E8A25] font-medium border border-[#6BA539]/15 whitespace-nowrap px-2.5 py-1 text-xs">Hoog grondwater</span>
                 </div>
+                <button
+                  type="button"
+                  onClick={(e) => { e.stopPropagation(); setP1Open(o => !o); }}
+                  aria-expanded={p1Open}
+                  className="inline-flex items-center gap-1.5 text-[#6BA539] text-sm font-semibold hover:gap-2.5 transition-all self-start sm:self-auto"
+                >
+                  {p1Open ? 'Lees minder' : 'Lees meer'}
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${p1Open ? 'rotate-180' : ''}`} />
+                </button>
               </div>
             </div>
 
