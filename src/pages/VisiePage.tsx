@@ -312,7 +312,7 @@ const VisiePage: React.FC = () => {
                 </p>
 
                 <div className="grid md:grid-cols-3 gap-10 lg:gap-12">
-                  {challenges.map((item, i) => <div key={item.title} className={`animate-on-scroll animate-on-scroll-delay-${i + 1} bg-white rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 group overflow-hidden flex flex-col`}>
+                  {challenges.map((item, i) => <div key={item.title} className={`animate-on-scroll animate-on-scroll-delay-${i + 1} bg-white rounded-2xl border border-gray-100 shadow-xl hover:shadow-2xl transition-all duration-300 group overflow-hidden flex flex-col`}>
                       <div className="aspect-[3/2] w-full overflow-hidden bg-gray-100">
                         <img src={item.image} alt={item.imageAlt} className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500" loading="lazy" />
                       </div>
