@@ -41,7 +41,7 @@ const PlatformHero: React.FC = () => {
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-gray-900 leading-[1.08] tracking-tight mb-5 sm:mb-8">
               Met NursiTree wordt Nederland steeds{' '}
-              <span className="text-[#6BAF3A]">groener.</span>
+              <span className="text-[#6BAF3A]">groener</span>
             </h1>
 
 
