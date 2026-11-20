@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Linkedin } from 'lucide-react';
 const LOGO_URL = 'https://d64gsuwffb70l.cloudfront.net/682e0896b7c1872af32988f8_1776912593295_25043f45.png';
 const TREE_ICON_URL = 'https://d64gsuwffb70l.cloudfront.net/682e0896b7c1872af32988f8_1777965423038_d3ef2ca7.png';
-const TONY_IMG = 'https://d64gsuwffb70l.cloudfront.net/682e0896b7c1872af32988f8_1778242890851_4ebbc743.JPG';
 const GERBRAND_IMG = 'https://d64gsuwffb70l.cloudfront.net/682e0896b7c1872af32988f8_1778242888607_6ad0a291.JPG';
 const Footer: React.FC = () => {
 
@@ -40,26 +39,6 @@ const Footer: React.FC = () => {
                   <img src={TREE_ICON_URL} alt="NursiTree" className="w-7 h-7 object-contain max-md:landscape:w-5 max-md:landscape:h-5" />
                 </div>
                 <span className="text-white/80 text-xs font-medium leading-none max-md:landscape:text-[10px]">NursiTree</span>
-                <Linkedin
-                  className="w-5 h-5 text-white/70 group-hover:text-[#0A66C2] transition-colors max-md:landscape:w-4 max-md:landscape:h-4"
-                  strokeWidth={2}
-                  aria-hidden="true"
-                />
-              </a>
-
-              {/* Tony Hoekstra */}
-              <a
-                href="https://www.linkedin.com/in/tonyhoekstra/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Bekijk Tony Hoekstra op LinkedIn"
-                title="Bekijk op LinkedIn"
-                className="group flex flex-col items-center gap-2 cursor-pointer transition-all duration-200 hover:opacity-90 hover:scale-[1.03] max-md:landscape:gap-1"
-              >
-                <div className="w-12 h-12 rounded-full overflow-hidden ring-2 ring-white/10 group-hover:ring-[#0A66C2]/60 transition-colors max-md:landscape:w-9 max-md:landscape:h-9">
-                  <img src={TONY_IMG} alt="Tony Hoekstra" className="w-full h-full object-cover" />
-                </div>
-                <span className="text-white/80 text-xs font-medium leading-none max-md:landscape:text-[10px]">Tony</span>
                 <Linkedin
                   className="w-5 h-5 text-white/70 group-hover:text-[#0A66C2] transition-colors max-md:landscape:w-4 max-md:landscape:h-4"
                   strokeWidth={2}
@@ -190,9 +169,9 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-[#E8854A] mt-0.5 flex-shrink-0" />
-                <a href="https://www.google.com/maps/search/?api=1&query=Noordzijdsedreef+10+3257+LL+Ooltgensplaat" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-white hover:underline text-sm transition-colors duration-200">
-                  Noordzijdsedreef 10<br />
-                  <span className="whitespace-nowrap">3257&nbsp;LL&nbsp;Ooltgensplaat</span>
+                <a href="https://www.google.com/maps/search/?api=1&query=De+Ruyterstraat+14+6712+DS+Ede" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-white hover:underline text-sm transition-colors duration-200">
+                  De Ruyterstraat 14<br />
+                  <span className="whitespace-nowrap">6712&nbsp;DS&nbsp;Ede</span>
                 </a>
 
               </li>
