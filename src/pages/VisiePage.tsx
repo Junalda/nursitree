@@ -354,7 +354,7 @@ const VisiePage: React.FC = () => {
                 </p>
 
                 <p className="text-lg text-gray-500 leading-relaxed">
-                  Door flexibele bomen aan te leveren, die we plaatsen in door ons ontwikkelde en gepatenteerde Urban Tree Pits. Zo bieden de bomen wel alle voordelen, maar nemen ze minder ruimte in, zitten ze andere faciliteiten onder de grond niet in de weg én ben je de investering niet kwijt als de boom na een aantal jaar te groot wordt en moet verplaatsen.
+                  Door flexibele bomen aan te leveren, die we plaatsen in door ons ontwikkelde en gepatenteerde Urban Tree Pits. Zo bieden de bomen wel alle voordelen, maar nemen ze minder ruimte in, zitten ze andere faciliteiten onder de grond niet in de weg én ben je de investering niet kwijt als de boom na een aantal jaar te groot wordt en moet worden verplaatst.
                 </p>
 
                 <p className="text-lg text-gray-600 leading-relaxed font-medium">
