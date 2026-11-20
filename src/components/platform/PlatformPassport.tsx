@@ -66,7 +66,7 @@ const PlatformPassport: React.FC = () => {
                 Bij NursiTree vinden we het belangrijk dat onze opdrachtgevers zo min mogelijk gedoe ervaren. Ze hebben het al druk genoeg.
               </p>
               <p className="text-lg text-gray-500 leading-relaxed">
-                Daarom registreren we op ons platform alles wat we moeten weten om de gezondheid en groei van elke boom scherp in de gaten te houden. Van plantdatum, tot boomsoort en van groeisnelheid tot omgevingsfactoren.
+                Daarom registreren we op ons platform alles wat we moeten weten om de gezondheid en groei van elke boom scherp in de gaten te houden. Van plantdatum tot boomsoort en van groeisnelheid tot omgevingsfactoren.
               </p>
               <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-10 mb-2 tracking-tight">
                 Een soort bomenpaspoort dus.
