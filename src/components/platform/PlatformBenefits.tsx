@@ -33,14 +33,14 @@ const PlatformBenefits: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="max-w-3xl mx-auto text-center mb-16 sm:mb-20">
+        <div className="text-center mb-16 sm:mb-20">
           <span className="text-[#6BA539] text-sm font-semibold uppercase tracking-[0.2em]">
             Voordelen
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mt-4 mb-6 tracking-tight">Waarom het NursiTree Platform werkt</h2>
+          <h2 className="text-3xl sm:text-4xl lg:text-[2.65rem] xl:text-5xl font-bold text-gray-900 mt-4 mb-6 tracking-tight lg:whitespace-nowrap">Waarom het NursiTree Platform werkt</h2>
 
 
-          <p className="text-lg text-gray-500 leading-relaxed">Ontworpen voor gemeenten, projectontwikkelaars en beheerders die slim vooruit willen kijken en die snappen dat hun boom geld waard is</p>
+          <p className="text-lg text-gray-500 leading-relaxed max-w-3xl mx-auto">Ontworpen voor gemeenten, projectontwikkelaars en beheerders die slim vooruit willen kijken en die snappen dat hun boom geld waard is</p>
         </div>
 
         {/* Benefits grid */}
